@@ -1,0 +1,346 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/pedro/projetos_quartus/Processador/simulation/qsim
+vDecodificadorInstrucoes
+Z1 !s110 1584479086
+!i10b 1
+!s100 T:6O]LaQG@72N;P>Pk5ma2
+IRkV@WZ1XM64Ta?S7zBlmV0
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1584479085
+Z3 8Processador.vo
+Z4 FProcessador.vo
+Z5 L0 32
+Z6 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1584479086.076101
+Z7 !s107 Processador.vo|
+Z8 !s90 -work|work|Processador.vo|
+!i113 1
+Z9 o-work work
+n@decodificador@instrucoes
+vDecodificadorInstrucoes_vlg_check_tst
+R1
+!i10b 1
+!s100 HL2[UaCBX2=flZ`S[OGP52
+IaNzc92dR0DLKIHJoLnzE01
+R2
+R0
+Z10 w1584479082
+Z11 8Waveform4.vwf.vt
+Z12 FWaveform4.vwf.vt
+L0 58
+R6
+r1
+!s85 0
+31
+Z13 !s108 1584479086.119003
+Z14 !s107 Waveform4.vwf.vt|
+Z15 !s90 -work|work|Waveform4.vwf.vt|
+!i113 1
+R9
+n@decodificador@instrucoes_vlg_check_tst
+vDecodificadorInstrucoes_vlg_sample_tst
+R1
+!i10b 1
+!s100 6NJ@8niXIZ^EDlJfg4E[N2
+I3R6:e:[ImmQ1ez;;LHa232
+R2
+R0
+R10
+R11
+R12
+Z16 L0 30
+R6
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 1
+R9
+n@decodificador@instrucoes_vlg_sample_tst
+vDecodificadorInstrucoes_vlg_vec_tst
+R1
+!i10b 1
+!s100 ?PPSYAcSi771?dcd8QnN02
+I4P50YA93m9OilVoXMD?2I0
+R2
+R0
+R10
+R11
+R12
+L0 666
+R6
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 1
+R9
+n@decodificador@instrucoes_vlg_vec_tst
+vMemoria
+Z17 !s110 1584473035
+!i10b 1
+!s100 cNch`KgL3e7ok4aWd2_[T1
+I0V[[UJN66naC]K:f:KKJB3
+R2
+R0
+w1584473034
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1584473035.357452
+R7
+R8
+!i113 1
+R9
+n@memoria
+vMemoria_vlg_check_tst
+R17
+!i10b 1
+!s100 kG8HD@L;nF[?NJCeGao4T0
+I>=<zW=H0Y3C>]iQKnBF_A2
+R2
+R0
+Z18 w1584473031
+Z19 8Waveform.vwf.vt
+Z20 FWaveform.vwf.vt
+Z21 L0 64
+R6
+r1
+!s85 0
+31
+Z22 !s108 1584473035.577076
+Z23 !s107 Waveform.vwf.vt|
+Z24 !s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R9
+n@memoria_vlg_check_tst
+vMemoria_vlg_sample_tst
+R17
+!i10b 1
+!s100 hAn>B405`Tf7i3mN^eekX2
+I^Z>FMeF?3ZG_BL?bAK2Nf1
+R2
+R0
+R18
+R19
+R20
+R16
+R6
+r1
+!s85 0
+31
+R22
+R23
+R24
+!i113 1
+R9
+n@memoria_vlg_sample_tst
+vMemoria_vlg_vec_tst
+R17
+!i10b 1
+!s100 XTPSjKUg4b5b6g=z49h402
+I4_fNTSGY`2encj=4HkWRJ3
+R2
+R0
+R18
+R19
+R20
+Z25 L0 428
+R6
+r1
+!s85 0
+31
+R22
+R23
+R24
+!i113 1
+R9
+n@memoria_vlg_vec_tst
+vProgramCounter
+Z26 !s110 1584474539
+!i10b 1
+!s100 ULk6I?]WXMO86z6ZGeihP0
+IQGjH^GLo:iiHVTn<UeOnY2
+R2
+R0
+w1584474538
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1584474539.104429
+R7
+R8
+!i113 1
+R9
+n@program@counter
+vProgramCounter_vlg_check_tst
+R26
+!i10b 1
+!s100 7DZQTh[nXPP;TiYN^X3Oa0
+IFh7D:SU1:06OWDUe6aBbW3
+R2
+R0
+Z27 w1584474535
+Z28 8Waveform1.vwf.vt
+Z29 FWaveform1.vwf.vt
+R21
+R6
+r1
+!s85 0
+31
+Z30 !s108 1584474539.147133
+Z31 !s107 Waveform1.vwf.vt|
+Z32 !s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R9
+n@program@counter_vlg_check_tst
+vProgramCounter_vlg_sample_tst
+R26
+!i10b 1
+!s100 0o]Dgk@D[W:^f<eBlGPb:2
+I;L?]?>2=ZD_b_i<=8oURI3
+R2
+R0
+R27
+R28
+R29
+R16
+R6
+r1
+!s85 0
+31
+R30
+R31
+R32
+!i113 1
+R9
+n@program@counter_vlg_sample_tst
+vProgramCounter_vlg_vec_tst
+R26
+!i10b 1
+!s100 jOHH_1_IWB1MN`NQHjNbd3
+I1[dS>5ZfE^z:1G9MOR<QT1
+R2
+R0
+R27
+R28
+R29
+R25
+R6
+r1
+!s85 0
+31
+R30
+R31
+R32
+!i113 1
+R9
+n@program@counter_vlg_vec_tst
+vRegistrador
+Z33 !s110 1584475172
+!i10b 1
+!s100 MWU:@2A:==P<caolOJHHm3
+Ik:2QO:67c78TgFhGj>AX_2
+R2
+R0
+w1584475171
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1584475172.327188
+R7
+R8
+!i113 1
+R9
+n@registrador
+vRegistrador_vlg_check_tst
+R33
+!i10b 1
+!s100 IZ0:UzTFM2CMcl3L;7i?<0
+I1kj8[IST3=Bd_E;`XmI<o2
+R2
+R0
+Z34 w1584475168
+Z35 8Waveform2.vwf.vt
+Z36 FWaveform2.vwf.vt
+L0 62
+R6
+r1
+!s85 0
+31
+Z37 !s108 1584475172.367523
+Z38 !s107 Waveform2.vwf.vt|
+Z39 !s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R9
+n@registrador_vlg_check_tst
+vRegistrador_vlg_sample_tst
+R33
+!i10b 1
+!s100 B^c@]mMRWoH^SS::Eb5Ah0
+IQHXcDY?4`JWo`i16ob?T_1
+R2
+R0
+R34
+R35
+R36
+R16
+R6
+r1
+!s85 0
+31
+R37
+R38
+R39
+!i113 1
+R9
+n@registrador_vlg_sample_tst
+vRegistrador_vlg_vec_tst
+R33
+!i10b 1
+!s100 UK`Lj`7Df203dQ^d4CRQ:1
+IYJhB4T<jNGVC000B[KM2l1
+R2
+R0
+R34
+R35
+R36
+L0 426
+R6
+r1
+!s85 0
+31
+R37
+R38
+R39
+!i113 1
+R9
+n@registrador_vlg_vec_tst
