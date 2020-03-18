@@ -1,0 +1,28 @@
+module ULA(X, Y, opULA, result, N, Z);
+
+input [15:0] X;
+input [15:0] Y;
+input [2:0] opULA;
+output [15:0] result;
+output N, Z;
+
+reg [15:0] res;
+
+always @ (*) begin
+	case (opULA)
+		3'b000: res = X + Y;
+		3'b001: res = X - Y;
+		3'b010: res = X & Y;
+		3'b011: res = X | Y;
+		3'b100: res = ~X;
+		3'b101: res = X >> 1;
+		3'b110: res = X << 1;
+		3'b111: res = X;
+	endcase
+end
+
+assign result = res;
+assign N = res[15];
+assign (res == 16'b0);
+
+endmodule

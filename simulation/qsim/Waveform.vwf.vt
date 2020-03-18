@@ -19,30 +19,32 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/17/2020 16:23:51"
+// Generated on "03/17/2020 20:37:41"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    Memoria
+// Verilog Self-Checking Test Bench (with test vectors) for design :    MUX4
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module Memoria_vlg_sample_tst(
-	addr,
-	clk,
-	data,
-	we,
+module MUX4_vlg_sample_tst(
+	in00,
+	in01,
+	in10,
+	in11,
+	select,
 	sampler_tx
 );
-input [15:0] addr;
-input  clk;
-input [15:0] data;
-input  we;
+input [15:0] in00;
+input [15:0] in01;
+input [15:0] in10;
+input [15:0] in11;
+input [1:0] select;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(addr or clk or data or we)
+always @(in00 or in01 or in10 or in11 or select)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -61,7 +63,7 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module Memoria_vlg_check_tst (
+module MUX4_vlg_check_tst (
 	q,
 	sampler_rx
 );
@@ -425,211 +427,378 @@ $finish;
 end 
 endmodule
 
-module Memoria_vlg_vec_tst();
+module MUX4_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [15:0] addr;
-reg clk;
-reg [15:0] data;
-reg we;
+reg [15:0] in00;
+reg [15:0] in01;
+reg [15:0] in10;
+reg [15:0] in11;
+reg [1:0] select;
 // wires                                               
 wire [15:0] q;
 
 wire sampler;                             
 
 // assign statements (if any)                          
-Memoria i1 (
+MUX4 i1 (
 // port map - connection between master ports and signals/registers   
-	.addr(addr),
-	.clk(clk),
-	.data(data),
+	.in00(in00),
+	.in01(in01),
+	.in10(in10),
+	.in11(in11),
 	.q(q),
-	.we(we)
+	.select(select)
 );
-
-// clk
+// select[ 1 ]
+initial
+begin
+	repeat(12)
+	begin
+		select[1] = 1'b0;
+		select[1] = #40000 1'b1;
+		# 40000;
+	end
+	select[1] = 1'b0;
+end 
+// select[ 0 ]
 always
 begin
-	clk = 1'b0;
-	clk = #10000 1'b1;
-	#10000;
+	select[0] = 1'b0;
+	select[0] = #20000 1'b1;
+	#20000;
 end 
-// addr[ 15 ]
+// in00[ 15 ]
 initial
 begin
-	addr[15] = 1'b0;
+	in00[15] = 1'b1;
 end 
-// addr[ 14 ]
+// in00[ 14 ]
 initial
 begin
-	addr[14] = 1'b0;
+	in00[14] = 1'b1;
 end 
-// addr[ 13 ]
+// in00[ 13 ]
 initial
 begin
-	addr[13] = 1'b0;
+	in00[13] = 1'b1;
 end 
-// addr[ 12 ]
+// in00[ 12 ]
 initial
 begin
-	addr[12] = 1'b0;
+	in00[12] = 1'b1;
 end 
-// addr[ 11 ]
+// in00[ 11 ]
 initial
 begin
-	addr[11] = 1'b0;
+	in00[11] = 1'b1;
 end 
-// addr[ 10 ]
+// in00[ 10 ]
 initial
 begin
-	addr[10] = 1'b0;
+	in00[10] = 1'b1;
 end 
-// addr[ 9 ]
+// in00[ 9 ]
 initial
 begin
-	addr[9] = 1'b0;
+	in00[9] = 1'b1;
 end 
-// addr[ 8 ]
+// in00[ 8 ]
 initial
 begin
-	addr[8] = 1'b0;
+	in00[8] = 1'b1;
 end 
-// addr[ 7 ]
+// in00[ 7 ]
 initial
 begin
-	addr[7] = 1'b0;
+	in00[7] = 1'b1;
 end 
-// addr[ 6 ]
+// in00[ 6 ]
 initial
 begin
-	addr[6] = 1'b0;
+	in00[6] = 1'b1;
 end 
-// addr[ 5 ]
+// in00[ 5 ]
 initial
 begin
-	addr[5] = 1'b0;
+	in00[5] = 1'b1;
 end 
-// addr[ 4 ]
+// in00[ 4 ]
 initial
 begin
-	addr[4] = 1'b0;
+	in00[4] = 1'b0;
 end 
-// addr[ 3 ]
+// in00[ 3 ]
 initial
 begin
-	addr[3] = 1'b0;
+	in00[3] = 1'b0;
 end 
-// addr[ 2 ]
+// in00[ 2 ]
 initial
 begin
-	addr[2] = 1'b0;
+	in00[2] = 1'b0;
 end 
-// addr[ 1 ]
+// in00[ 1 ]
 initial
 begin
-	addr[1] = 1'b0;
+	in00[1] = 1'b1;
 end 
-// addr[ 0 ]
+// in00[ 0 ]
 initial
 begin
-	addr[0] = 1'b1;
+	in00[0] = 1'b0;
 end 
-// data[ 15 ]
+// in01[ 15 ]
 initial
 begin
-	data[15] = 1'b0;
+	in01[15] = 1'b0;
 end 
-// data[ 14 ]
+// in01[ 14 ]
 initial
 begin
-	data[14] = 1'b0;
+	in01[14] = 1'b0;
 end 
-// data[ 13 ]
+// in01[ 13 ]
 initial
 begin
-	data[13] = 1'b0;
+	in01[13] = 1'b0;
 end 
-// data[ 12 ]
+// in01[ 12 ]
 initial
 begin
-	data[12] = 1'b0;
+	in01[12] = 1'b0;
 end 
-// data[ 11 ]
+// in01[ 11 ]
 initial
 begin
-	data[11] = 1'b0;
+	in01[11] = 1'b0;
 end 
-// data[ 10 ]
+// in01[ 10 ]
 initial
 begin
-	data[10] = 1'b0;
+	in01[10] = 1'b0;
 end 
-// data[ 9 ]
+// in01[ 9 ]
 initial
 begin
-	data[9] = 1'b0;
+	in01[9] = 1'b1;
 end 
-// data[ 8 ]
+// in01[ 8 ]
 initial
 begin
-	data[8] = 1'b0;
+	in01[8] = 1'b0;
 end 
-// data[ 7 ]
+// in01[ 7 ]
 initial
 begin
-	data[7] = 1'b0;
+	in01[7] = 1'b0;
 end 
-// data[ 6 ]
+// in01[ 6 ]
 initial
 begin
-	data[6] = 1'b0;
+	in01[6] = 1'b0;
 end 
-// data[ 5 ]
+// in01[ 5 ]
 initial
 begin
-	data[5] = 1'b0;
+	in01[5] = 1'b1;
 end 
-// data[ 4 ]
+// in01[ 4 ]
 initial
 begin
-	data[4] = 1'b0;
+	in01[4] = 1'b0;
 end 
-// data[ 3 ]
+// in01[ 3 ]
 initial
 begin
-	data[3] = 1'b0;
+	in01[3] = 1'b0;
 end 
-// data[ 2 ]
+// in01[ 2 ]
 initial
 begin
-	data[2] = 1'b0;
+	in01[2] = 1'b0;
 end 
-// data[ 1 ]
+// in01[ 1 ]
 initial
 begin
-	data[1] = 1'b0;
+	in01[1] = 1'b1;
 end 
-// data[ 0 ]
+// in01[ 0 ]
 initial
 begin
-	data[0] = 1'b0;
+	in01[0] = 1'b1;
+end 
+// in10[ 15 ]
+initial
+begin
+	in10[15] = 1'b0;
+end 
+// in10[ 14 ]
+initial
+begin
+	in10[14] = 1'b0;
+end 
+// in10[ 13 ]
+initial
+begin
+	in10[13] = 1'b0;
+end 
+// in10[ 12 ]
+initial
+begin
+	in10[12] = 1'b0;
+end 
+// in10[ 11 ]
+initial
+begin
+	in10[11] = 1'b0;
+end 
+// in10[ 10 ]
+initial
+begin
+	in10[10] = 1'b0;
+end 
+// in10[ 9 ]
+initial
+begin
+	in10[9] = 1'b0;
+end 
+// in10[ 8 ]
+initial
+begin
+	in10[8] = 1'b0;
+end 
+// in10[ 7 ]
+initial
+begin
+	in10[7] = 1'b0;
+end 
+// in10[ 6 ]
+initial
+begin
+	in10[6] = 1'b0;
+end 
+// in10[ 5 ]
+initial
+begin
+	in10[5] = 1'b0;
+end 
+// in10[ 4 ]
+initial
+begin
+	in10[4] = 1'b0;
+end 
+// in10[ 3 ]
+initial
+begin
+	in10[3] = 1'b0;
+end 
+// in10[ 2 ]
+initial
+begin
+	in10[2] = 1'b0;
+end 
+// in10[ 1 ]
+initial
+begin
+	in10[1] = 1'b1;
+end 
+// in10[ 0 ]
+initial
+begin
+	in10[0] = 1'b1;
+end 
+// in11[ 15 ]
+initial
+begin
+	in11[15] = 1'b0;
+end 
+// in11[ 14 ]
+initial
+begin
+	in11[14] = 1'b0;
+end 
+// in11[ 13 ]
+initial
+begin
+	in11[13] = 1'b0;
+end 
+// in11[ 12 ]
+initial
+begin
+	in11[12] = 1'b0;
+end 
+// in11[ 11 ]
+initial
+begin
+	in11[11] = 1'b0;
+end 
+// in11[ 10 ]
+initial
+begin
+	in11[10] = 1'b0;
+end 
+// in11[ 9 ]
+initial
+begin
+	in11[9] = 1'b0;
+end 
+// in11[ 8 ]
+initial
+begin
+	in11[8] = 1'b0;
+end 
+// in11[ 7 ]
+initial
+begin
+	in11[7] = 1'b0;
+end 
+// in11[ 6 ]
+initial
+begin
+	in11[6] = 1'b1;
+end 
+// in11[ 5 ]
+initial
+begin
+	in11[5] = 1'b0;
+end 
+// in11[ 4 ]
+initial
+begin
+	in11[4] = 1'b1;
+end 
+// in11[ 3 ]
+initial
+begin
+	in11[3] = 1'b0;
+end 
+// in11[ 2 ]
+initial
+begin
+	in11[2] = 1'b1;
+end 
+// in11[ 1 ]
+initial
+begin
+	in11[1] = 1'b1;
+end 
+// in11[ 0 ]
+initial
+begin
+	in11[0] = 1'b1;
 end 
 
-// we
-initial
-begin
-	we = 1'b0;
-end 
-
-Memoria_vlg_sample_tst tb_sample (
-	.addr(addr),
-	.clk(clk),
-	.data(data),
-	.we(we),
+MUX4_vlg_sample_tst tb_sample (
+	.in00(in00),
+	.in01(in01),
+	.in10(in10),
+	.in11(in11),
+	.select(select),
 	.sampler_tx(sampler)
 );
 
-Memoria_vlg_check_tst tb_out(
+MUX4_vlg_check_tst tb_out(
 	.q(q),
 	.sampler_rx(sampler)
 );

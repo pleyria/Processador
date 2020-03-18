@@ -1,25 +1,25 @@
 module DecodificadorInstrucoes (
 	input [15:0] instrucao,
-	output NOP,
-	output STA,
-	output LDA,
-	output ADD,
-	output SUB,
-	output AND,
-	output OR,
-	output NOT,
-	output J,
-	output JN,
-	output JZ,
-	output IN,
-	output OUT,
-	output SHR,
-	output SHL,
-	output HLT,
-	output DIR,
-	output IND,
-	output IM,
-	output SOP);		
+	output sNOP,
+	output sSTA,
+	output sLDA,
+	output sADD,
+	output sSUB,
+	output sAND,
+	output sOR,
+	output sNOT,
+	output sJ,
+	output sJN,
+	output sJZ,
+	output sIN,
+	output sOUT,
+	output sSHR,
+	output sSHL,
+	output sHLT,
+	output sDIR,
+	output sIND,
+	output sIM,
+	output sSOP);		
 
 reg [15:0] operacao;
 reg [3:0] modo;
@@ -51,7 +51,7 @@ always @ (instrucao) begin
 	endcase
 end
 
-assign {NOP, STA, LDA, ADD, SUB, AND, OR, NOT, J, JN, JZ, IN, OUT, SHR, SHL, HLT} = operacao;
-assign {DIR, IND, IM, SOP} = modo;
+assign {sNOP, sSTA, sLDA, sADD, sSUB, sAND, sOR, sNOT, sJ, sJN, sJZ, sIN, sOUT, sSHR, sSHL, sHLT} = operacao;
+assign {sDIR, sIND, sIM, sSOP} = modo;
 
 endmodule

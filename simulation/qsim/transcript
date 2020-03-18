@@ -1,40 +1,37 @@
 # do Processador.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 18:04:46 on Mar 17,2020
+# Start time: 20:37:45 on Mar 17,2020
 # vlog -work work Processador.vo 
-# -- Compiling module DecodificadorInstrucoes
+# -- Compiling module MUX4
 # 
 # Top level modules:
-# 	DecodificadorInstrucoes
-# End time: 18:04:46 on Mar 17,2020, Elapsed time: 0:00:00
+# 	MUX4
+# End time: 20:37:45 on Mar 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 18:04:46 on Mar 17,2020
-# vlog -work work Waveform4.vwf.vt 
-# -- Compiling module DecodificadorInstrucoes_vlg_sample_tst
-# -- Compiling module DecodificadorInstrucoes_vlg_check_tst
-# -- Compiling module DecodificadorInstrucoes_vlg_vec_tst
+# Start time: 20:37:45 on Mar 17,2020
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module MUX4_vlg_sample_tst
+# -- Compiling module MUX4_vlg_check_tst
+# -- Compiling module MUX4_vlg_vec_tst
 # 
 # Top level modules:
-# 	DecodificadorInstrucoes_vlg_vec_tst
-# End time: 18:04:46 on Mar 17,2020, Elapsed time: 0:00:00
+# 	MUX4_vlg_vec_tst
+# End time: 20:37:45 on Mar 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -do "Processador.do" 
-# Start time: 18:04:46 on Mar 17,2020
-# Loading work.DecodificadorInstrucoes_vlg_vec_tst
-# Loading work.DecodificadorInstrucoes
+# Start time: 20:37:45 on Mar 17,2020
+# Loading work.MUX4_vlg_vec_tst
+# Loading work.MUX4
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
 # Loading cycloneive_ver.cycloneive_lcell_comb
-# Loading cycloneive_ver.cycloneive_clkctrl
-# Loading cycloneive_ver.cycloneive_mux41
-# Loading cycloneive_ver.cycloneive_ena_reg
-# Loading work.DecodificadorInstrucoes_vlg_sample_tst
-# Loading work.DecodificadorInstrucoes_vlg_check_tst
+# Loading work.MUX4_vlg_sample_tst
+# Loading work.MUX4_vlg_check_tst
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # Simulation passed !
-# ** Note: $finish    : Waveform4.vwf.vt(662)
-#    Time: 1 us  Iteration: 0  Instance: /DecodificadorInstrucoes_vlg_vec_tst/tb_out
-# End time: 18:04:46 on Mar 17,2020, Elapsed time: 0:00:00
+# ** Note: $finish    : Waveform.vwf.vt(426)
+#    Time: 1 us  Iteration: 0  Instance: /MUX4_vlg_vec_tst/tb_out
+# End time: 20:37:46 on Mar 17,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
