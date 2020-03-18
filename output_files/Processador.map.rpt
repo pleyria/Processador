@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Tue Mar 17 20:35:47 2020
+Wed Mar 18 10:55:35 2020
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -14,7 +14,7 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+  9. Inverted Register Statistics
  10. Post-Synthesis Netlist Statistics for Top Partition
  11. Elapsed Time Per Partition
  12. Analysis & Synthesis Messages
@@ -44,16 +44,16 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 17 20:35:47 2020      ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 18 10:55:35 2020      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; Processador                                ;
-; Top-level Entity Name              ; MUX4                                       ;
+; Top-level Entity Name              ; UnidadeControle                            ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 32                                         ;
-;     Total combinational functions  ; 32                                         ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 82                                         ;
+; Total logic elements               ; 75                                         ;
+;     Total combinational functions  ; 72                                         ;
+;     Dedicated logic registers      ; 27                                         ;
+; Total registers                    ; 27                                         ;
+; Total pins                         ; 39                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -67,7 +67,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; MUX4               ; Processador        ;
+; Top-level entity name                                                      ; UnidadeControle    ; Processador        ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -159,45 +159,45 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
-; MUX4.v                           ; yes             ; User Verilog HDL File  ; /home/pedro/projetos_quartus/Processador/MUX4.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                               ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
+; UnidadeControle.v                ; yes             ; User Verilog HDL File  ; /home/pedro/projetos_quartus/Processador/UnidadeControle.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 32              ;
-;                                             ;                 ;
-; Total combinational functions               ; 32              ;
-; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 32              ;
-;     -- 3 input functions                    ; 0               ;
-;     -- <=2 input functions                  ; 0               ;
-;                                             ;                 ;
-; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 32              ;
-;     -- arithmetic mode                      ; 0               ;
-;                                             ;                 ;
-; Total registers                             ; 0               ;
-;     -- Dedicated logic registers            ; 0               ;
-;     -- I/O registers                        ; 0               ;
-;                                             ;                 ;
-; I/O pins                                    ; 82              ;
-;                                             ;                 ;
-; Embedded Multiplier 9-bit elements          ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; select[1]~input ;
-; Maximum fan-out                             ; 24              ;
-; Total fan-out                               ; 226             ;
-; Average fan-out                             ; 1.15            ;
-+---------------------------------------------+-----------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 75        ;
+;                                             ;           ;
+; Total combinational functions               ; 72        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 47        ;
+;     -- 3 input functions                    ; 14        ;
+;     -- <=2 input functions                  ; 11        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 72        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 27        ;
+;     -- Dedicated logic registers            ; 27        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 39        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 27        ;
+; Total fan-out                               ; 360       ;
+; Average fan-out                             ; 2.03      ;
++---------------------------------------------+-----------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -205,7 +205,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |MUX4                      ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 82   ; 0            ; |MUX4               ; work         ;
+; |UnidadeControle           ; 72 (72)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 39   ; 0            ; |UnidadeControle    ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -215,7 +215,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 27    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -225,13 +225,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MUX4|Mux15                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; t0                                     ; 5       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -239,13 +240,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 82                          ;
-; cycloneiii_lcell_comb ; 32                          ;
-;     normal            ; 32                          ;
-;         4 data inputs ; 32                          ;
+; boundary_port         ; 39                          ;
+; cycloneiii_ff         ; 27                          ;
+;     plain             ; 27                          ;
+; cycloneiii_lcell_comb ; 72                          ;
+;     normal            ; 72                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 47                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.67                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.14                        ;
 +-----------------------+-----------------------------+
 
 
@@ -254,7 +260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -264,7 +270,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Tue Mar 17 20:35:29 2020
+    Info: Processing started: Wed Mar 18 10:55:18 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file Memoria.v
@@ -283,18 +289,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file MUX2.v
     Info (12023): Found entity 1: MUX2
 Info (12021): Found 1 design units, including 1 entities, in source file MUX4.v
     Info (12023): Found entity 1: MUX4
-Info (12127): Elaborating entity "MUX4" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file UnidadeControle.v
+    Info (12023): Found entity 1: UnidadeControle
+Info (12127): Elaborating entity "UnidadeControle" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 114 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 66 input pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sHLT"
+Info (21057): Implemented 117 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 32 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1016 megabytes
-    Info: Processing ended: Tue Mar 17 20:35:47 2020
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:42
+    Info (21061): Implemented 78 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1013 megabytes
+    Info: Processing ended: Wed Mar 18 10:55:35 2020
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:43
 
 
