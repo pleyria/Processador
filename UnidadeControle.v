@@ -59,7 +59,6 @@ assign T9 = t9;
 
 // tempo	
 reg got0;
-reg [9:0] tempo;
 reg t0, t1, t2, t3, t4, t5, t6, t7, t8, t9;
 
 // controle
@@ -87,7 +86,7 @@ initial begin
 end
 	
 always @ (posedge clk) begin // contagem dos tempos de execucao
-	if (got0) begin
+	if (got0 || t9) begin
 		{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000001;
 	end
 	else if (t0) begin

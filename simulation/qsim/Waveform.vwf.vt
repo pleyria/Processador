@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/18/2020 14:51:18"
+// Generated on "03/18/2020 22:17:15"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    UnidadeControle
 // 
@@ -967,7 +967,10 @@ end
 // sDIR
 initial
 begin
-	sDIR = 1'b0;
+	sDIR = 1'b1;
+	sDIR = #300000 1'b0;
+	sDIR = #300000 1'b1;
+	sDIR = #300000 1'b0;
 end 
 
 // sHLT
@@ -979,7 +982,7 @@ end
 // sIM
 initial
 begin
-	sIM = 1'b1;
+	sIM = 1'b0;
 end 
 
 // sIN
@@ -1016,6 +1019,9 @@ end
 initial
 begin
 	sLDA = 1'b1;
+	sLDA = #300000 1'b0;
+	sLDA = #300000 1'b1;
+	sLDA = #300000 1'b0;
 end 
 
 // sN
@@ -1034,6 +1040,9 @@ end
 initial
 begin
 	sNOT = 1'b0;
+	sNOT = #300000 1'b1;
+	sNOT = #300000 1'b0;
+	sNOT = #300000 1'b1;
 end 
 
 // sOR
@@ -1064,6 +1073,9 @@ end
 initial
 begin
 	sSOP = 1'b0;
+	sSOP = #300000 1'b1;
+	sSOP = #300000 1'b0;
+	sSOP = #300000 1'b1;
 end 
 
 // sSTA

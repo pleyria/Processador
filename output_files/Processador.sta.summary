@@ -3,75 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -6.756
-TNS   : -2048.236
+Slack : -5.804
+TNS   : -2766.121
 
 Type  : Slow 1200mV 85C Model Setup 'Registrador:RI|conteudo[15]'
-Slack : -2.737
-TNS   : -31.876
+Slack : -3.090
+TNS   : -30.713
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.360
+Slack : 0.275
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'Registrador:RI|conteudo[15]'
-Slack : 0.971
+Slack : 0.709
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1166.897
+TNS   : -1297.088
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Registrador:RI|conteudo[15]'
-Slack : 0.433
+Slack : 0.417
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -6.073
-TNS   : -1846.473
+Slack : -5.109
+TNS   : -2436.666
 
 Type  : Slow 1200mV 0C Model Setup 'Registrador:RI|conteudo[15]'
-Slack : -2.489
-TNS   : -28.312
+Slack : -2.684
+TNS   : -26.486
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.338
+Slack : 0.271
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'Registrador:RI|conteudo[15]'
-Slack : 0.900
+Slack : 0.683
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1150.001
+TNS   : -1297.088
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Registrador:RI|conteudo[15]'
-Slack : 0.463
+Slack : 0.443
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -2.872
-TNS   : -854.197
+Slack : -2.776
+TNS   : -1304.503
 
 Type  : Fast 1200mV 0C Model Setup 'Registrador:RI|conteudo[15]'
-Slack : -0.889
-TNS   : -8.574
+Slack : -1.396
+TNS   : -10.703
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.143
+Slack : 0.127
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'Registrador:RI|conteudo[15]'
-Slack : 0.474
+Slack : 0.381
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -543.748
+TNS   : -769.475
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Registrador:RI|conteudo[15]'
-Slack : 0.409
+Slack : 0.416
 TNS   : 0.000
 
 ------------------------------------------------------------

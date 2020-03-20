@@ -24,7 +24,7 @@ module DecodificadorInstrucoes (
 reg [15:0] operacao;
 reg [3:0] modo;
 
-always @ (instrucao) begin
+always @ (*) begin
 	case (instrucao[15:11]) // decodifica operacao
 		5'd0: operacao = 16'h8000;
 		5'd1: operacao = 16'h4000;

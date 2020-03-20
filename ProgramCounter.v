@@ -11,16 +11,13 @@ initial begin
 end
 
 always @ (posedge clk) begin
-	if (incrementPC) begin // aumenta o PC
-		if (counter == 16'hffff) begin
+	if (incrementPC) begin
+		if (counter == 16'hFFFF) begin
 			counter <= 16'b0;
 		end
 		else begin
-			counter <= counter + 16'b1;
+			counter <= counter + 1;
 		end
-	end
-	else if (writePC) begin // escreve no PC
-		counter <= data;
 	end
 end
 
