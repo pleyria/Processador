@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/20/2020 14:47:25"
+// Generated on "03/21/2020 12:54:09"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    CPU
 // 
@@ -492,825 +492,982 @@ end
 initial
 begin
 	T9_expected = 1'bX;
+	T9_expected = #999000 1'b0;
 end 
 
 // expected T8
 initial
 begin
 	T8_expected = 1'bX;
+	T8_expected = #999000 1'b0;
 end 
 
 // expected T7
 initial
 begin
 	T7_expected = 1'bX;
+	T7_expected = #999000 1'b0;
 end 
 
 // expected T6
 initial
 begin
 	T6_expected = 1'bX;
+	T6_expected = #999000 1'b0;
 end 
 
 // expected T5
 initial
 begin
 	T5_expected = 1'bX;
+	T5_expected = #999000 1'b0;
 end 
 
 // expected T4
 initial
 begin
 	T4_expected = 1'bX;
+	T4_expected = #999000 1'b0;
 end 
 
 // expected T3
 initial
 begin
 	T3_expected = 1'bX;
+	T3_expected = #999000 1'b0;
 end 
 
 // expected T2
 initial
 begin
 	T2_expected = 1'bX;
+	T2_expected = #999000 1'b0;
 end 
 
 // expected T1
 initial
 begin
 	T1_expected = 1'bX;
+	T1_expected = #999000 1'b0;
 end 
 
 // expected T0
 initial
 begin
 	T0_expected = 1'bX;
+	T0_expected = #999000 1'b0;
 end 
 // expected acumulador[ 15 ]
 initial
 begin
 	acumulador_expected[15] = 1'bX;
+	acumulador_expected[15] = #999000 1'b0;
 end 
 // expected acumulador[ 14 ]
 initial
 begin
 	acumulador_expected[14] = 1'bX;
+	acumulador_expected[14] = #999000 1'b0;
 end 
 // expected acumulador[ 13 ]
 initial
 begin
 	acumulador_expected[13] = 1'bX;
+	acumulador_expected[13] = #999000 1'b0;
 end 
 // expected acumulador[ 12 ]
 initial
 begin
 	acumulador_expected[12] = 1'bX;
+	acumulador_expected[12] = #999000 1'b0;
 end 
 // expected acumulador[ 11 ]
 initial
 begin
 	acumulador_expected[11] = 1'bX;
+	acumulador_expected[11] = #999000 1'b0;
 end 
 // expected acumulador[ 10 ]
 initial
 begin
 	acumulador_expected[10] = 1'bX;
+	acumulador_expected[10] = #999000 1'b0;
 end 
 // expected acumulador[ 9 ]
 initial
 begin
 	acumulador_expected[9] = 1'bX;
+	acumulador_expected[9] = #999000 1'b0;
 end 
 // expected acumulador[ 8 ]
 initial
 begin
 	acumulador_expected[8] = 1'bX;
+	acumulador_expected[8] = #999000 1'b0;
 end 
 // expected acumulador[ 7 ]
 initial
 begin
 	acumulador_expected[7] = 1'bX;
+	acumulador_expected[7] = #999000 1'b0;
 end 
 // expected acumulador[ 6 ]
 initial
 begin
 	acumulador_expected[6] = 1'bX;
+	acumulador_expected[6] = #999000 1'b0;
 end 
 // expected acumulador[ 5 ]
 initial
 begin
 	acumulador_expected[5] = 1'bX;
+	acumulador_expected[5] = #999000 1'b0;
 end 
 // expected acumulador[ 4 ]
 initial
 begin
 	acumulador_expected[4] = 1'bX;
+	acumulador_expected[4] = #999000 1'b0;
 end 
 // expected acumulador[ 3 ]
 initial
 begin
 	acumulador_expected[3] = 1'bX;
+	acumulador_expected[3] = #999000 1'b0;
 end 
 // expected acumulador[ 2 ]
 initial
 begin
 	acumulador_expected[2] = 1'bX;
+	acumulador_expected[2] = #999000 1'b0;
 end 
 // expected acumulador[ 1 ]
 initial
 begin
 	acumulador_expected[1] = 1'bX;
+	acumulador_expected[1] = #999000 1'b0;
 end 
 // expected acumulador[ 0 ]
 initial
 begin
 	acumulador_expected[0] = 1'bX;
+	acumulador_expected[0] = #999000 1'b0;
 end 
 // expected saida[ 15 ]
 initial
 begin
 	saida_expected[15] = 1'bX;
+	saida_expected[15] = #999000 1'b0;
 end 
 // expected saida[ 14 ]
 initial
 begin
 	saida_expected[14] = 1'bX;
+	saida_expected[14] = #999000 1'b0;
 end 
 // expected saida[ 13 ]
 initial
 begin
 	saida_expected[13] = 1'bX;
+	saida_expected[13] = #999000 1'b0;
 end 
 // expected saida[ 12 ]
 initial
 begin
 	saida_expected[12] = 1'bX;
+	saida_expected[12] = #999000 1'b0;
 end 
 // expected saida[ 11 ]
 initial
 begin
 	saida_expected[11] = 1'bX;
+	saida_expected[11] = #999000 1'b0;
 end 
 // expected saida[ 10 ]
 initial
 begin
 	saida_expected[10] = 1'bX;
+	saida_expected[10] = #999000 1'b0;
 end 
 // expected saida[ 9 ]
 initial
 begin
 	saida_expected[9] = 1'bX;
+	saida_expected[9] = #999000 1'b0;
 end 
 // expected saida[ 8 ]
 initial
 begin
 	saida_expected[8] = 1'bX;
+	saida_expected[8] = #999000 1'b0;
 end 
 // expected saida[ 7 ]
 initial
 begin
 	saida_expected[7] = 1'bX;
+	saida_expected[7] = #999000 1'b0;
 end 
 // expected saida[ 6 ]
 initial
 begin
 	saida_expected[6] = 1'bX;
+	saida_expected[6] = #999000 1'b0;
 end 
 // expected saida[ 5 ]
 initial
 begin
 	saida_expected[5] = 1'bX;
+	saida_expected[5] = #999000 1'b0;
 end 
 // expected saida[ 4 ]
 initial
 begin
 	saida_expected[4] = 1'bX;
+	saida_expected[4] = #999000 1'b0;
 end 
 // expected saida[ 3 ]
 initial
 begin
 	saida_expected[3] = 1'bX;
+	saida_expected[3] = #999000 1'b0;
 end 
 // expected saida[ 2 ]
 initial
 begin
 	saida_expected[2] = 1'bX;
+	saida_expected[2] = #999000 1'b0;
 end 
 // expected saida[ 1 ]
 initial
 begin
 	saida_expected[1] = 1'bX;
+	saida_expected[1] = #999000 1'b0;
 end 
 // expected saida[ 0 ]
 initial
 begin
 	saida_expected[0] = 1'bX;
+	saida_expected[0] = #999000 1'b0;
 end 
 // expected opULA[ 2 ]
 initial
 begin
 	opULA_expected[2] = 1'bX;
+	opULA_expected[2] = #999000 1'b0;
 end 
 // expected opULA[ 1 ]
 initial
 begin
 	opULA_expected[1] = 1'bX;
+	opULA_expected[1] = #999000 1'b0;
 end 
 // expected opULA[ 0 ]
 initial
 begin
 	opULA_expected[0] = 1'bX;
+	opULA_expected[0] = #999000 1'b0;
 end 
 // expected selectRDM[ 1 ]
 initial
 begin
 	selectRDM_expected[1] = 1'bX;
+	selectRDM_expected[1] = #999000 1'b0;
 end 
 // expected selectRDM[ 0 ]
 initial
 begin
 	selectRDM_expected[0] = 1'bX;
+	selectRDM_expected[0] = #999000 1'b0;
 end 
 
 // expected selectREM
 initial
 begin
 	selectREM_expected = 1'bX;
+	selectREM_expected = #999000 1'b0;
 end 
 // expected qPC[ 15 ]
 initial
 begin
 	qPC_expected[15] = 1'bX;
+	qPC_expected[15] = #999000 1'b0;
 end 
 // expected qPC[ 14 ]
 initial
 begin
 	qPC_expected[14] = 1'bX;
+	qPC_expected[14] = #999000 1'b0;
 end 
 // expected qPC[ 13 ]
 initial
 begin
 	qPC_expected[13] = 1'bX;
+	qPC_expected[13] = #999000 1'b0;
 end 
 // expected qPC[ 12 ]
 initial
 begin
 	qPC_expected[12] = 1'bX;
+	qPC_expected[12] = #999000 1'b0;
 end 
 // expected qPC[ 11 ]
 initial
 begin
 	qPC_expected[11] = 1'bX;
+	qPC_expected[11] = #999000 1'b0;
 end 
 // expected qPC[ 10 ]
 initial
 begin
 	qPC_expected[10] = 1'bX;
+	qPC_expected[10] = #999000 1'b0;
 end 
 // expected qPC[ 9 ]
 initial
 begin
 	qPC_expected[9] = 1'bX;
+	qPC_expected[9] = #999000 1'b0;
 end 
 // expected qPC[ 8 ]
 initial
 begin
 	qPC_expected[8] = 1'bX;
+	qPC_expected[8] = #999000 1'b0;
 end 
 // expected qPC[ 7 ]
 initial
 begin
 	qPC_expected[7] = 1'bX;
+	qPC_expected[7] = #999000 1'b0;
 end 
 // expected qPC[ 6 ]
 initial
 begin
 	qPC_expected[6] = 1'bX;
+	qPC_expected[6] = #999000 1'b0;
 end 
 // expected qPC[ 5 ]
 initial
 begin
 	qPC_expected[5] = 1'bX;
+	qPC_expected[5] = #999000 1'b0;
 end 
 // expected qPC[ 4 ]
 initial
 begin
 	qPC_expected[4] = 1'bX;
+	qPC_expected[4] = #999000 1'b0;
 end 
 // expected qPC[ 3 ]
 initial
 begin
 	qPC_expected[3] = 1'bX;
+	qPC_expected[3] = #999000 1'b0;
 end 
 // expected qPC[ 2 ]
 initial
 begin
 	qPC_expected[2] = 1'bX;
+	qPC_expected[2] = #999000 1'b0;
 end 
 // expected qPC[ 1 ]
 initial
 begin
 	qPC_expected[1] = 1'bX;
+	qPC_expected[1] = #999000 1'b0;
 end 
 // expected qPC[ 0 ]
 initial
 begin
 	qPC_expected[0] = 1'bX;
+	qPC_expected[0] = #999000 1'b0;
 end 
 // expected qRDM[ 15 ]
 initial
 begin
 	qRDM_expected[15] = 1'bX;
+	qRDM_expected[15] = #999000 1'b0;
 end 
 // expected qRDM[ 14 ]
 initial
 begin
 	qRDM_expected[14] = 1'bX;
+	qRDM_expected[14] = #999000 1'b0;
 end 
 // expected qRDM[ 13 ]
 initial
 begin
 	qRDM_expected[13] = 1'bX;
+	qRDM_expected[13] = #999000 1'b0;
 end 
 // expected qRDM[ 12 ]
 initial
 begin
 	qRDM_expected[12] = 1'bX;
+	qRDM_expected[12] = #999000 1'b0;
 end 
 // expected qRDM[ 11 ]
 initial
 begin
 	qRDM_expected[11] = 1'bX;
+	qRDM_expected[11] = #999000 1'b0;
 end 
 // expected qRDM[ 10 ]
 initial
 begin
 	qRDM_expected[10] = 1'bX;
+	qRDM_expected[10] = #999000 1'b0;
 end 
 // expected qRDM[ 9 ]
 initial
 begin
 	qRDM_expected[9] = 1'bX;
+	qRDM_expected[9] = #999000 1'b0;
 end 
 // expected qRDM[ 8 ]
 initial
 begin
 	qRDM_expected[8] = 1'bX;
+	qRDM_expected[8] = #999000 1'b0;
 end 
 // expected qRDM[ 7 ]
 initial
 begin
 	qRDM_expected[7] = 1'bX;
+	qRDM_expected[7] = #999000 1'b0;
 end 
 // expected qRDM[ 6 ]
 initial
 begin
 	qRDM_expected[6] = 1'bX;
+	qRDM_expected[6] = #999000 1'b0;
 end 
 // expected qRDM[ 5 ]
 initial
 begin
 	qRDM_expected[5] = 1'bX;
+	qRDM_expected[5] = #999000 1'b0;
 end 
 // expected qRDM[ 4 ]
 initial
 begin
 	qRDM_expected[4] = 1'bX;
+	qRDM_expected[4] = #999000 1'b0;
 end 
 // expected qRDM[ 3 ]
 initial
 begin
 	qRDM_expected[3] = 1'bX;
+	qRDM_expected[3] = #999000 1'b0;
 end 
 // expected qRDM[ 2 ]
 initial
 begin
 	qRDM_expected[2] = 1'bX;
+	qRDM_expected[2] = #999000 1'b0;
 end 
 // expected qRDM[ 1 ]
 initial
 begin
 	qRDM_expected[1] = 1'bX;
+	qRDM_expected[1] = #999000 1'b0;
 end 
 // expected qRDM[ 0 ]
 initial
 begin
 	qRDM_expected[0] = 1'bX;
+	qRDM_expected[0] = #999000 1'b0;
 end 
 // expected qREM[ 15 ]
 initial
 begin
 	qREM_expected[15] = 1'bX;
+	qREM_expected[15] = #999000 1'b0;
 end 
 // expected qREM[ 14 ]
 initial
 begin
 	qREM_expected[14] = 1'bX;
+	qREM_expected[14] = #999000 1'b0;
 end 
 // expected qREM[ 13 ]
 initial
 begin
 	qREM_expected[13] = 1'bX;
+	qREM_expected[13] = #999000 1'b0;
 end 
 // expected qREM[ 12 ]
 initial
 begin
 	qREM_expected[12] = 1'bX;
+	qREM_expected[12] = #999000 1'b0;
 end 
 // expected qREM[ 11 ]
 initial
 begin
 	qREM_expected[11] = 1'bX;
+	qREM_expected[11] = #999000 1'b0;
 end 
 // expected qREM[ 10 ]
 initial
 begin
 	qREM_expected[10] = 1'bX;
+	qREM_expected[10] = #999000 1'b0;
 end 
 // expected qREM[ 9 ]
 initial
 begin
 	qREM_expected[9] = 1'bX;
+	qREM_expected[9] = #999000 1'b0;
 end 
 // expected qREM[ 8 ]
 initial
 begin
 	qREM_expected[8] = 1'bX;
+	qREM_expected[8] = #999000 1'b0;
 end 
 // expected qREM[ 7 ]
 initial
 begin
 	qREM_expected[7] = 1'bX;
+	qREM_expected[7] = #999000 1'b0;
 end 
 // expected qREM[ 6 ]
 initial
 begin
 	qREM_expected[6] = 1'bX;
+	qREM_expected[6] = #999000 1'b0;
 end 
 // expected qREM[ 5 ]
 initial
 begin
 	qREM_expected[5] = 1'bX;
+	qREM_expected[5] = #999000 1'b0;
 end 
 // expected qREM[ 4 ]
 initial
 begin
 	qREM_expected[4] = 1'bX;
+	qREM_expected[4] = #999000 1'b0;
 end 
 // expected qREM[ 3 ]
 initial
 begin
 	qREM_expected[3] = 1'bX;
+	qREM_expected[3] = #999000 1'b0;
 end 
 // expected qREM[ 2 ]
 initial
 begin
 	qREM_expected[2] = 1'bX;
+	qREM_expected[2] = #999000 1'b0;
 end 
 // expected qREM[ 1 ]
 initial
 begin
 	qREM_expected[1] = 1'bX;
+	qREM_expected[1] = #999000 1'b0;
 end 
 // expected qREM[ 0 ]
 initial
 begin
 	qREM_expected[0] = 1'bX;
+	qREM_expected[0] = #999000 1'b0;
 end 
 // expected qRI[ 15 ]
 initial
 begin
 	qRI_expected[15] = 1'bX;
+	qRI_expected[15] = #999000 1'b0;
 end 
 // expected qRI[ 14 ]
 initial
 begin
 	qRI_expected[14] = 1'bX;
+	qRI_expected[14] = #999000 1'b0;
 end 
 // expected qRI[ 13 ]
 initial
 begin
 	qRI_expected[13] = 1'bX;
+	qRI_expected[13] = #999000 1'b0;
 end 
 // expected qRI[ 12 ]
 initial
 begin
 	qRI_expected[12] = 1'bX;
+	qRI_expected[12] = #999000 1'b0;
 end 
 // expected qRI[ 11 ]
 initial
 begin
 	qRI_expected[11] = 1'bX;
+	qRI_expected[11] = #999000 1'b0;
 end 
 // expected qRI[ 10 ]
 initial
 begin
 	qRI_expected[10] = 1'bX;
+	qRI_expected[10] = #999000 1'b0;
 end 
 // expected qRI[ 9 ]
 initial
 begin
 	qRI_expected[9] = 1'bX;
+	qRI_expected[9] = #999000 1'b0;
 end 
 // expected qRI[ 8 ]
 initial
 begin
 	qRI_expected[8] = 1'bX;
+	qRI_expected[8] = #999000 1'b0;
 end 
 // expected qRI[ 7 ]
 initial
 begin
 	qRI_expected[7] = 1'bX;
+	qRI_expected[7] = #999000 1'b0;
 end 
 // expected qRI[ 6 ]
 initial
 begin
 	qRI_expected[6] = 1'bX;
+	qRI_expected[6] = #999000 1'b0;
 end 
 // expected qRI[ 5 ]
 initial
 begin
 	qRI_expected[5] = 1'bX;
+	qRI_expected[5] = #999000 1'b0;
 end 
 // expected qRI[ 4 ]
 initial
 begin
 	qRI_expected[4] = 1'bX;
+	qRI_expected[4] = #999000 1'b0;
 end 
 // expected qRI[ 3 ]
 initial
 begin
 	qRI_expected[3] = 1'bX;
+	qRI_expected[3] = #999000 1'b0;
 end 
 // expected qRI[ 2 ]
 initial
 begin
 	qRI_expected[2] = 1'bX;
+	qRI_expected[2] = #999000 1'b0;
 end 
 // expected qRI[ 1 ]
 initial
 begin
 	qRI_expected[1] = 1'bX;
+	qRI_expected[1] = #999000 1'b0;
 end 
 // expected qRI[ 0 ]
 initial
 begin
 	qRI_expected[0] = 1'bX;
+	qRI_expected[0] = #999000 1'b0;
 end 
 // expected qMEM[ 15 ]
 initial
 begin
 	qMEM_expected[15] = 1'bX;
+	qMEM_expected[15] = #999000 1'b0;
 end 
 // expected qMEM[ 14 ]
 initial
 begin
 	qMEM_expected[14] = 1'bX;
+	qMEM_expected[14] = #999000 1'b0;
 end 
 // expected qMEM[ 13 ]
 initial
 begin
 	qMEM_expected[13] = 1'bX;
+	qMEM_expected[13] = #999000 1'b0;
 end 
 // expected qMEM[ 12 ]
 initial
 begin
 	qMEM_expected[12] = 1'bX;
+	qMEM_expected[12] = #999000 1'b0;
 end 
 // expected qMEM[ 11 ]
 initial
 begin
 	qMEM_expected[11] = 1'bX;
+	qMEM_expected[11] = #999000 1'b0;
 end 
 // expected qMEM[ 10 ]
 initial
 begin
 	qMEM_expected[10] = 1'bX;
+	qMEM_expected[10] = #999000 1'b0;
 end 
 // expected qMEM[ 9 ]
 initial
 begin
 	qMEM_expected[9] = 1'bX;
+	qMEM_expected[9] = #999000 1'b0;
 end 
 // expected qMEM[ 8 ]
 initial
 begin
 	qMEM_expected[8] = 1'bX;
+	qMEM_expected[8] = #999000 1'b0;
 end 
 // expected qMEM[ 7 ]
 initial
 begin
 	qMEM_expected[7] = 1'bX;
+	qMEM_expected[7] = #999000 1'b0;
 end 
 // expected qMEM[ 6 ]
 initial
 begin
 	qMEM_expected[6] = 1'bX;
+	qMEM_expected[6] = #999000 1'b0;
 end 
 // expected qMEM[ 5 ]
 initial
 begin
 	qMEM_expected[5] = 1'bX;
+	qMEM_expected[5] = #999000 1'b0;
 end 
 // expected qMEM[ 4 ]
 initial
 begin
 	qMEM_expected[4] = 1'bX;
+	qMEM_expected[4] = #999000 1'b0;
 end 
 // expected qMEM[ 3 ]
 initial
 begin
 	qMEM_expected[3] = 1'bX;
+	qMEM_expected[3] = #999000 1'b0;
 end 
 // expected qMEM[ 2 ]
 initial
 begin
 	qMEM_expected[2] = 1'bX;
+	qMEM_expected[2] = #999000 1'b0;
 end 
 // expected qMEM[ 1 ]
 initial
 begin
 	qMEM_expected[1] = 1'bX;
+	qMEM_expected[1] = #999000 1'b0;
 end 
 // expected qMEM[ 0 ]
 initial
 begin
 	qMEM_expected[0] = 1'bX;
+	qMEM_expected[0] = #999000 1'b0;
 end 
 
 // expected sADD
 initial
 begin
 	sADD_expected = 1'bX;
+	sADD_expected = #999000 1'b0;
 end 
 
 // expected sAND
 initial
 begin
 	sAND_expected = 1'bX;
+	sAND_expected = #999000 1'b0;
 end 
 
 // expected sDIR
 initial
 begin
 	sDIR_expected = 1'bX;
+	sDIR_expected = #999000 1'b0;
 end 
 
 // expected sHLT
 initial
 begin
 	sHLT_expected = 1'bX;
+	sHLT_expected = #999000 1'b0;
 end 
 
 // expected sIM
 initial
 begin
 	sIM_expected = 1'bX;
+	sIM_expected = #999000 1'b0;
 end 
 
 // expected sIN
 initial
 begin
 	sIN_expected = 1'bX;
+	sIN_expected = #999000 1'b0;
 end 
 
 // expected sIND
 initial
 begin
 	sIND_expected = 1'bX;
+	sIND_expected = #999000 1'b0;
 end 
 
 // expected sJ
 initial
 begin
 	sJ_expected = 1'bX;
+	sJ_expected = #999000 1'b0;
 end 
 
 // expected sJN
 initial
 begin
 	sJN_expected = 1'bX;
+	sJN_expected = #999000 1'b0;
 end 
 
 // expected sJZ
 initial
 begin
 	sJZ_expected = 1'bX;
+	sJZ_expected = #999000 1'b0;
 end 
 
 // expected sLDA
 initial
 begin
 	sLDA_expected = 1'bX;
+	sLDA_expected = #999000 1'b0;
 end 
 
 // expected sNOP
 initial
 begin
 	sNOP_expected = 1'bX;
+	sNOP_expected = #999000 1'b0;
 end 
 
 // expected sNOT
 initial
 begin
 	sNOT_expected = 1'bX;
+	sNOT_expected = #999000 1'b0;
 end 
 
 // expected sOR
 initial
 begin
 	sOR_expected = 1'bX;
+	sOR_expected = #999000 1'b0;
 end 
 
 // expected sOUT
 initial
 begin
 	sOUT_expected = 1'bX;
+	sOUT_expected = #999000 1'b0;
 end 
 
 // expected sSHL
 initial
 begin
 	sSHL_expected = 1'bX;
+	sSHL_expected = #999000 1'b0;
 end 
 
 // expected sSHR
 initial
 begin
 	sSHR_expected = 1'bX;
+	sSHR_expected = #999000 1'b0;
 end 
 
 // expected sSOP
 initial
 begin
 	sSOP_expected = 1'bX;
+	sSOP_expected = #999000 1'b0;
 end 
 
 // expected sSTA
 initial
 begin
 	sSTA_expected = 1'bX;
+	sSTA_expected = #999000 1'b0;
 end 
 
 // expected sSUB
 initial
 begin
 	sSUB_expected = 1'bX;
+	sSUB_expected = #999000 1'b0;
 end 
 
 // expected incrementPC
 initial
 begin
 	incrementPC_expected = 1'bX;
+	incrementPC_expected = #999000 1'b0;
 end 
 
 // expected writeAC
 initial
 begin
 	writeAC_expected = 1'bX;
+	writeAC_expected = #999000 1'b0;
 end 
 
 // expected writeMEM
 initial
 begin
 	writeMEM_expected = 1'bX;
+	writeMEM_expected = #999000 1'b0;
 end 
 
 // expected writeN
 initial
 begin
 	writeN_expected = 1'bX;
+	writeN_expected = #999000 1'b0;
 end 
 
 // expected writeOUT
 initial
 begin
 	writeOUT_expected = 1'bX;
+	writeOUT_expected = #999000 1'b0;
 end 
 
 // expected writeRDM
 initial
 begin
 	writeRDM_expected = 1'bX;
+	writeRDM_expected = #999000 1'b0;
 end 
 
 // expected writeREM
 initial
 begin
 	writeREM_expected = 1'bX;
+	writeREM_expected = #999000 1'b0;
 end 
 
 // expected writeRI
 initial
 begin
 	writeRI_expected = 1'bX;
+	writeRI_expected = #999000 1'b0;
 end 
 
 // expected writeZ
 initial
 begin
 	writeZ_expected = 1'bX;
+	writeZ_expected = #999000 1'b0;
 end 
 // generate trigger
 always @(T0_expected or T0 or T1_expected or T1 or T2_expected or T2 or T3_expected or T3 or T4_expected or T4 or T5_expected or T5 or T6_expected or T6 or T7_expected or T7 or T8_expected or T8 or T9_expected or T9 or acumulador_expected or acumulador or incrementPC_expected or incrementPC or opULA_expected or opULA or qMEM_expected or qMEM or qPC_expected or qPC or qRDM_expected or qRDM or qREM_expected or qREM or qRI_expected or qRI or sADD_expected or sADD or sAND_expected or sAND or sDIR_expected or sDIR or sHLT_expected or sHLT or sIM_expected or sIM or sIN_expected or sIN or sIND_expected or sIND or sJ_expected or sJ or sJN_expected or sJN or sJZ_expected or sJZ or sLDA_expected or sLDA or sNOP_expected or sNOP or sNOT_expected or sNOT or sOR_expected or sOR or sOUT_expected or sOUT or sSHL_expected or sSHL or sSHR_expected or sSHR or sSOP_expected or sSOP or sSTA_expected or sSTA or sSUB_expected or sSUB or saida_expected or saida or selectRDM_expected or selectRDM or selectREM_expected or selectREM or writeAC_expected or writeAC or writeMEM_expected or writeMEM or writeN_expected or writeN or writeOUT_expected or writeOUT or writeRDM_expected or writeRDM or writeREM_expected or writeREM or writeRI_expected or writeRI or writeZ_expected or writeZ)
@@ -3374,7 +3531,7 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#1000000;
+#1500000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
@@ -3501,8 +3658,8 @@ CPU i1 (
 always
 begin
 	clk = 1'b0;
-	clk = #10000 1'b1;
-	#10000;
+	clk = #5000 1'b1;
+	#5000;
 end 
 // entrada[ 15 ]
 initial
@@ -3553,36 +3710,84 @@ end
 initial
 begin
 	entrada[6] = 1'b0;
+	entrada[6] = #500000 1'b1;
 end 
 // entrada[ 5 ]
 initial
 begin
-	entrada[5] = 1'b0;
+	entrada[5] = 1'b1;
+	entrada[5] = #500000 1'b0;
+	entrada[5] = #600000 1'b1;
 end 
 // entrada[ 4 ]
 initial
 begin
 	entrada[4] = 1'b0;
+	# 200000;
+	repeat(2)
+	begin
+		entrada[4] = 1'b1;
+		entrada[4] = #300000 1'b0;
+		# 300000;
+	end
+	entrada[4] = 1'b1;
 end 
 // entrada[ 3 ]
 initial
 begin
+	repeat(2)
+	begin
+		entrada[3] = 1'b1;
+		entrada[3] = #200000 1'b0;
+		# 100000;
+	end
+	entrada[3] = 1'b1;
+	# 200000;
+	repeat(2)
+	begin
+		entrada[3] = 1'b0;
+		entrada[3] = #200000 1'b1;
+		# 100000;
+	end
 	entrada[3] = 1'b0;
 end 
 // entrada[ 2 ]
 initial
 begin
 	entrada[2] = 1'b0;
+	entrada[2] = #100000 1'b1;
+	entrada[2] = #200000 1'b0;
+	entrada[2] = #100000 1'b1;
+	entrada[2] = #100000 1'b0;
+	entrada[2] = #200000 1'b1;
+	entrada[2] = #100000 1'b0;
+	entrada[2] = #100000 1'b1;
+	entrada[2] = #200000 1'b0;
+	entrada[2] = #100000 1'b1;
+	entrada[2] = #100000 1'b0;
 end 
 // entrada[ 1 ]
 initial
 begin
-	entrada[1] = 1'b0;
+	repeat(3)
+	begin
+		entrada[1] = 1'b1;
+		entrada[1] = #200000 1'b0;
+		# 200000;
+	end
+	entrada[1] = 1'b1;
+	entrada[1] = #200000 1'b0;
 end 
 // entrada[ 0 ]
 initial
 begin
-	entrada[0] = 1'b1;
+	repeat(7)
+	begin
+		entrada[0] = 1'b0;
+		entrada[0] = #100000 1'b1;
+		# 100000;
+	end
+	entrada[0] = 1'b0;
 end 
 
 CPU_vlg_sample_tst tb_sample (

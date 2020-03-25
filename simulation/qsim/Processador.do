@@ -1,10 +1,10 @@
 onerror {exit -code 1}
 vlib work
 vlog -work work Processador.vo
-vlog -work work CPU.vwf.vt
-vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CPU_vlg_vec_tst -voptargs="+acc"
+vlog -work work sinalMag.vwf.vt
+vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Complemento2SinalMag_vlg_vec_tst -voptargs="+acc"
 vcd file -direction Processador.msim.vcd
-vcd add -internal CPU_vlg_vec_tst/*
-vcd add -internal CPU_vlg_vec_tst/i1/*
+vcd add -internal Complemento2SinalMag_vlg_vec_tst/*
+vcd add -internal Complemento2SinalMag_vlg_vec_tst/i1/*
 run -all
 quit -f

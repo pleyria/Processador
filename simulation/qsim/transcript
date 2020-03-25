@@ -1,47 +1,37 @@
 # do Processador.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 14:47:30 on Mar 20,2020
+# Start time: 13:53:19 on Mar 21,2020
 # vlog -work work Processador.vo 
-# -- Compiling module CPU
+# -- Compiling module Complemento2SinalMag
 # 
 # Top level modules:
-# 	CPU
-# End time: 14:47:30 on Mar 20,2020, Elapsed time: 0:00:00
+# 	Complemento2SinalMag
+# End time: 13:53:19 on Mar 21,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 14:47:30 on Mar 20,2020
-# vlog -work work CPU.vwf.vt 
-# -- Compiling module CPU_vlg_sample_tst
-# -- Compiling module CPU_vlg_check_tst
-# -- Compiling module CPU_vlg_vec_tst
+# Start time: 13:53:19 on Mar 21,2020
+# vlog -work work sinalMag.vwf.vt 
+# -- Compiling module Complemento2SinalMag_vlg_sample_tst
+# -- Compiling module Complemento2SinalMag_vlg_check_tst
+# -- Compiling module Complemento2SinalMag_vlg_vec_tst
 # 
 # Top level modules:
-# 	CPU_vlg_vec_tst
-# End time: 14:47:30 on Mar 20,2020, Elapsed time: 0:00:00
+# 	Complemento2SinalMag_vlg_vec_tst
+# End time: 13:53:19 on Mar 21,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -do "Processador.do" 
-# Start time: 14:47:30 on Mar 20,2020
-# Loading work.CPU_vlg_vec_tst
-# Loading work.CPU
+# Start time: 13:53:19 on Mar 21,2020
+# Loading work.Complemento2SinalMag_vlg_vec_tst
+# Loading work.Complemento2SinalMag
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
-# Loading cycloneive_ver.cycloneive_clkctrl
-# Loading cycloneive_ver.cycloneive_mux41
-# Loading cycloneive_ver.cycloneive_ena_reg
-# Loading altera_ver.dffeas
 # Loading cycloneive_ver.cycloneive_lcell_comb
-# Loading cycloneive_ver.cycloneive_ram_block
-# Loading cycloneive_ver.cycloneive_ram_register
-# Loading cycloneive_ver.cycloneive_ram_pulse_generator
-# Loading work.CPU_vlg_sample_tst
-# Loading work.CPU_vlg_check_tst
-# Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 12828 statements exceeds ModelSim Altera Starter recommended capacity.
-# Expect performance to be adversely affected.
+# Loading work.Complemento2SinalMag_vlg_sample_tst
+# Loading work.Complemento2SinalMag_vlg_check_tst
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # Simulation passed !
-# ** Note: $finish    : CPU.vwf.vt(3382)
-#    Time: 1 us  Iteration: 0  Instance: /CPU_vlg_vec_tst/tb_out
-# End time: 14:47:42 on Mar 20,2020, Elapsed time: 0:00:12
-# Errors: 0, Warnings: 2
+# ** Note: $finish    : sinalMag.vwf.vt(427)
+#    Time: 1 us  Iteration: 0  Instance: /Complemento2SinalMag_vlg_vec_tst/tb_out
+# End time: 13:53:19 on Mar 21,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1

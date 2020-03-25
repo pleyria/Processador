@@ -1,5 +1,5 @@
 Assembler report for Processador
-Fri Mar 20 14:46:58 2020
+Sat Mar 21 13:02:09 2020
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -38,11 +38,11 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Mar 20 14:46:58 2020 ;
+; Assembler Status      ; Successful - Sat Mar 21 13:02:09 2020 ;
 ; Revision Name         ; Processador                           ;
-; Top-level Entity Name ; CPU                                   ;
+; Top-level Entity Name ; Complemento2SinalMag                  ;
 ; Family                ; Cyclone IV E                          ;
-; Device                ; EP4CE55F23C6                          ;
+; Device                ; EP4CE6E22C6                           ;
 +-----------------------+---------------------------------------+
 
 
@@ -67,9 +67,9 @@ agreement for further details.
 +----------------+--------------------------+
 ; Option         ; Setting                  ;
 +----------------+--------------------------+
-; Device         ; EP4CE55F23C6             ;
-; JTAG usercode  ; 0x003C4992               ;
-; Checksum       ; 0x003C4992               ;
+; Device         ; EP4CE6E22C6              ;
+; JTAG usercode  ; 0x00096482               ;
+; Checksum       ; 0x00096482               ;
 +----------------+--------------------------+
 
 
@@ -79,14 +79,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Fri Mar 20 14:46:55 2020
+    Info: Processing started: Sat Mar 21 13:02:08 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Processador -c Processador
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 854 megabytes
-    Info: Processing ended: Fri Mar 20 14:46:59 2020
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 833 megabytes
+    Info: Processing ended: Sat Mar 21 13:02:09 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
