@@ -1,0 +1,16 @@
+module Sinal7seg (sinal, a, b, c, d, e, f, g);
+
+input sinal;
+
+output a, b, c, d, e, f, g;
+
+always @ (*) begin
+	if (sinal) begin
+		{a, b, c, d, e, f, g} = 7'b1111110;
+	end
+	else begin
+		{a, b, c, d, e, f, g} = 7'b1111111;
+	end
+end
+
+endmodule

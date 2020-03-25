@@ -1,0 +1,9 @@
+
+State Machine - |CPU|Bin2BCD:B2BCD|estado
+Name estado.s_FIM estado.s_VERIFICA_DIGITO_DECIMAL estado.s_SOMA estado.s_VERIFICA_SHIFT estado.s_SHIFT estado.s_INATIVO 
+estado.s_INATIVO 0 0 0 0 0 0 
+estado.s_SHIFT 0 0 0 0 1 1 
+estado.s_VERIFICA_SHIFT 0 0 0 1 0 1 
+estado.s_SOMA 0 0 1 0 0 1 
+estado.s_VERIFICA_DIGITO_DECIMAL 0 1 0 0 0 1 
+estado.s_FIM 1 0 0 0 0 1 
