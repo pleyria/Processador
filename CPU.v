@@ -1,10 +1,10 @@
-module CPU (clk, entrada, saida, T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, acumulador, qMEM, qREM, qRDM, qRI, qPC, sNOP,
+module CPU (clk, clkBCD, entrada, saida, T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, acumulador, qMEM, qREM, qRDM, qRI, qPC, sNOP,
 sSTA, sLDA, sADD, sSUB, sAND, sOR, sNOT, sJ, sJN, sJZ, sIN, sOUT, sSHR, sSHL, sHLT, sDIR, sIND, sIM, sSOP,
 writeAC, writeN, writeZ, writeRDM, writeRI, writeOUT, writeREM, writeMEM, selectREM, incrementPC, selectRDM, opULA,
 a0, b0, c0, d0, e0, f0, g0, a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2, a3, b3, c3, d3, e3, f3, g3,
-a4, b4, c4, d4, e4, f4, g4, a5, b5, c5, d5, e5, f5, g5);
+a4, b4, c4, d4, e4, f4, g4, a5, b5, c5, d5, e5, f5, g5, bcd);
 
-input clk;
+input clk, clkBCD;
 input [15:0] entrada;
 output [1:0] selectRDM;
 output [2:0] opULA;
@@ -13,11 +13,15 @@ output sNOP, sSTA, sLDA, sADD, sSUB, sAND, sOR, sNOT, sJ, sJN,
 sJZ, sIN, sOUT, sSHR, sSHL, sHLT, sDIR, sIND, sIM, sSOP, writeAC, writeN, writeZ, writeRDM, writeRI, 
 writeOUT, writeREM, writeMEM, selectREM, incrementPC;
 output T0, T1, T2, T3, T4, T5, T6, T7, T8, T9;
+output [19:0] bcd;
+
 // display
 output a0, b0, c0, d0, e0, f0, g0, a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2, a3, b3, c3, d3, e3, f3, g3,
 a4, b4, c4, d4, e4, f4, g4, a5, b5, c5, d5, e5, f5, g5;
 
+
 // saidas para testes
+assign bcd = w_bcd;
 assign saida = w_OUT;
 assign qMEM = w_MEM;
 assign acumulador = w_AC;
@@ -88,26 +92,9 @@ Registrador RI (.clk(clk), .write(w_writeRI), .data(w_RDM), .q(w_RI));
 
 Registrador OUT (.clk(clk), .write(w_writeOUT), .data(w_RDM), .q(w_OUT));
 
-Complemento2SinalMag CompSinMag(.in(w_OUT), .out(w_CompSinMag), .sinal(w_sinal));
+Complemento2SinalMag CompSinMag(.in(w_RDM), .out(w_CompSinMag), .sinal(w_sinal));
 
-// bloco para guardar o start a partir do writeout
-reg [1:0] strt;
-reg st;
-always @ (posedge clk) begin
-	if (w_writeOUT) begin
-		strt <= 2'b11;
-		st <= 1;
-	end
-	else if (strt > 2'b00) begin
-		strt <= strt - 2'b01;
-		st <= 1;
-	end
-	else begin 
-		st <= 0;
-	end
-end
-
-Bin2BCD B2BCD (.clock(clock), .bin(w_CompSinMag), .start(st), .bcd(w_bcd));
+Bin2BCD B2BCD (.clock(clkBCD), .bin(w_CompSinMag), .start(w_writeOUT), .bcd(w_bcd));
 
 Sinal7seg SEG5 (.sinal(w_sinal), .a(a5), .b(b5), .c(c5), .d(d5), .e(e5), .f(f5), .g(g5));
 BCD7seg SEG4 (.bcd(w_bcd[19:16]), .a(a4), .b(b4), .c(c4), .d(d4), .e(e4), .f(f4), .g(g4));

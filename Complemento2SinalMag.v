@@ -4,7 +4,21 @@ input [15:0] in;
 output [15:0] out;
 output sinal;
 
-assign sinal = in[15];
-assign out = ~in[14:0] + 15'b1;
+reg [15:0] mag;
+reg si;
+
+assign out = mag;
+assign sinal = si;
+
+always @ (*) begin
+	if (in[15]) begin // Entrada negativa
+		si = 1;
+		mag = ~in + 1;
+	end
+	else begin // Entrada positiva
+		si = 0;
+		mag = in;
+	end
+end
 
 endmodule
