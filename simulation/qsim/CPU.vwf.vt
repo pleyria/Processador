@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/25/2020 21:25:24"
+// Generated on "03/25/2020 22:58:03"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    CPU
 // 
@@ -1003,101 +1003,121 @@ end
 initial
 begin
 	bcd_expected[19] = 1'bX;
+	bcd_expected[19] = #3999000 1'b0;
 end 
 // expected bcd[ 18 ]
 initial
 begin
 	bcd_expected[18] = 1'bX;
+	bcd_expected[18] = #3999000 1'b0;
 end 
 // expected bcd[ 17 ]
 initial
 begin
 	bcd_expected[17] = 1'bX;
+	bcd_expected[17] = #3999000 1'b0;
 end 
 // expected bcd[ 16 ]
 initial
 begin
 	bcd_expected[16] = 1'bX;
+	bcd_expected[16] = #3999000 1'b0;
 end 
 // expected bcd[ 15 ]
 initial
 begin
 	bcd_expected[15] = 1'bX;
+	bcd_expected[15] = #3999000 1'b0;
 end 
 // expected bcd[ 14 ]
 initial
 begin
 	bcd_expected[14] = 1'bX;
+	bcd_expected[14] = #3999000 1'b0;
 end 
 // expected bcd[ 13 ]
 initial
 begin
 	bcd_expected[13] = 1'bX;
+	bcd_expected[13] = #3999000 1'b0;
 end 
 // expected bcd[ 12 ]
 initial
 begin
 	bcd_expected[12] = 1'bX;
+	bcd_expected[12] = #3999000 1'b0;
 end 
 // expected bcd[ 11 ]
 initial
 begin
 	bcd_expected[11] = 1'bX;
+	bcd_expected[11] = #3999000 1'b0;
 end 
 // expected bcd[ 10 ]
 initial
 begin
 	bcd_expected[10] = 1'bX;
+	bcd_expected[10] = #3999000 1'b0;
 end 
 // expected bcd[ 9 ]
 initial
 begin
 	bcd_expected[9] = 1'bX;
+	bcd_expected[9] = #3999000 1'b0;
 end 
 // expected bcd[ 8 ]
 initial
 begin
 	bcd_expected[8] = 1'bX;
+	bcd_expected[8] = #3999000 1'b0;
 end 
 // expected bcd[ 7 ]
 initial
 begin
 	bcd_expected[7] = 1'bX;
+	bcd_expected[7] = #3999000 1'b0;
 end 
 // expected bcd[ 6 ]
 initial
 begin
 	bcd_expected[6] = 1'bX;
+	bcd_expected[6] = #3999000 1'b0;
 end 
 // expected bcd[ 5 ]
 initial
 begin
 	bcd_expected[5] = 1'bX;
+	bcd_expected[5] = #3999000 1'b0;
 end 
 // expected bcd[ 4 ]
 initial
 begin
 	bcd_expected[4] = 1'bX;
+	bcd_expected[4] = #3999000 1'b0;
 end 
 // expected bcd[ 3 ]
 initial
 begin
 	bcd_expected[3] = 1'bX;
+	bcd_expected[3] = #3999000 1'b0;
 end 
 // expected bcd[ 2 ]
 initial
 begin
 	bcd_expected[2] = 1'bX;
+	bcd_expected[2] = #3999000 1'b0;
 end 
 // expected bcd[ 1 ]
 initial
 begin
 	bcd_expected[1] = 1'bX;
+	bcd_expected[1] = #3999000 1'b0;
 end 
 // expected bcd[ 0 ]
 initial
 begin
 	bcd_expected[0] = 1'bX;
+	bcd_expected[0] = #3999000 1'b0;
 end 
 // expected acumulador[ 15 ]
 initial
@@ -5077,7 +5097,7 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#4000000;
+#5000000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
@@ -5289,23 +5309,17 @@ CPU i1 (
 );
 
 // clk
-initial
+always
 begin
-	repeat(133)
-	begin
-		clk = 1'b0;
-		clk = #15000 1'b1;
-		# 15000;
-	end
 	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
 end 
 
 // clkBCD
-always
+initial
 begin
 	clkBCD = 1'b0;
-	clkBCD = #2000 1'b1;
-	#2000;
 end 
 // entrada[ 15 ]
 initial
@@ -5356,86 +5370,35 @@ end
 initial
 begin
 	entrada[6] = 1'b0;
-	entrada[6] = #500000 1'b1;
-	entrada[6] = #999000 1'b0;
 end 
 // entrada[ 5 ]
 initial
 begin
-	entrada[5] = 1'b1;
-	entrada[5] = #500000 1'b0;
-	entrada[5] = #600000 1'b1;
-	entrada[5] = #399000 1'b0;
+	entrada[5] = 1'b0;
 end 
 // entrada[ 4 ]
 initial
 begin
 	entrada[4] = 1'b0;
-	# 200000;
-	repeat(2)
-	begin
-		entrada[4] = 1'b1;
-		entrada[4] = #300000 1'b0;
-		# 300000;
-	end
-	entrada[4] = 1'b1;
-	entrada[4] = #99000 1'b0;
 end 
 // entrada[ 3 ]
 initial
 begin
-	repeat(2)
-	begin
-		entrada[3] = 1'b1;
-		entrada[3] = #200000 1'b0;
-		# 100000;
-	end
-	entrada[3] = 1'b1;
-	# 200000;
-	repeat(2)
-	begin
-		entrada[3] = 1'b0;
-		entrada[3] = #200000 1'b1;
-		# 100000;
-	end
 	entrada[3] = 1'b0;
 end 
 // entrada[ 2 ]
 initial
 begin
-	entrada[2] = 1'b0;
-	entrada[2] = #100000 1'b1;
-	entrada[2] = #200000 1'b0;
-	entrada[2] = #100000 1'b1;
-	entrada[2] = #100000 1'b0;
-	entrada[2] = #200000 1'b1;
-	entrada[2] = #100000 1'b0;
-	entrada[2] = #100000 1'b1;
-	entrada[2] = #200000 1'b0;
-	entrada[2] = #100000 1'b1;
-	entrada[2] = #100000 1'b0;
+	entrada[2] = 1'b1;
 end 
 // entrada[ 1 ]
 initial
 begin
-	repeat(3)
-	begin
-		entrada[1] = 1'b1;
-		entrada[1] = #200000 1'b0;
-		# 200000;
-	end
 	entrada[1] = 1'b1;
-	entrada[1] = #200000 1'b0;
 end 
 // entrada[ 0 ]
 initial
 begin
-	repeat(7)
-	begin
-		entrada[0] = 1'b0;
-		entrada[0] = #100000 1'b1;
-		# 100000;
-	end
 	entrada[0] = 1'b0;
 end 
 
