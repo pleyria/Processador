@@ -42,6 +42,7 @@ always @ (*) begin
 		5'd13: operacao = 16'h0004;
 		5'd14: operacao = 16'h0002;
 		5'd15: operacao = 16'h0001;
+		default: operacao = 16'h8000;
 	endcase
 	case (instrucao[10:9]) // decodifica modo de enderecamento
 		2'b00: modo = 4'h8;

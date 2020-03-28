@@ -11,14 +11,16 @@ initial begin
 end
 
 always @ (posedge clk) begin
-	if (incrementPC) begin
-		if (counter == 16'hFFFF) begin
-			counter <= 16'b0;
+	case (writePC)
+		1'b0: begin
+			if (incrementPC)
+				counter <= counter + 16'b1;
+			else
+				counter <= counter;
 		end
-		else begin
-			counter <= counter + 1;
-		end
-	end
+		1'b1:
+			counter <= data;
+	endcase
 end
 
 assign q = counter;

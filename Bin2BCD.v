@@ -71,7 +71,7 @@ always @ (posedge clock) begin
 				estado <= s_FIM;
 			end
 			else begin
-				i <= i + 1;
+				i <= i + 4'b1;
 				estado <= s_SOMA;
 			end
 		end
@@ -79,7 +79,7 @@ always @ (posedge clock) begin
 		// Verifica se precisa somar 3 no bcd
 		s_SOMA: begin
 			if (digito_BCD > 4) begin
-				r_bcd[(digito_decimal*4) +: 4] <= digito_BCD + 3;
+				r_bcd[(digito_decimal*4) +: 4] <= digito_BCD + 20'd3;
 			end
 			estado <= s_VERIFICA_DIGITO_DECIMAL;
 		end
@@ -91,7 +91,7 @@ always @ (posedge clock) begin
 				estado <= s_SHIFT;
 			end
 			else begin
-				digito_decimal <= digito_decimal + 1;
+				digito_decimal <= digito_decimal + 5'b1;
 				estado <= s_SOMA;
 			end
 		end

@@ -1,5 +1,5 @@
 module CPU (clk, clkBCD, entrada, saida, T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, acumulador, qMEM, qREM, qRDM, qRI, qPC, sNOP,
-sSTA, sLDA, sADD, sSUB, sAND, sOR, sNOT, sJ, sJN, sJZ, sIN, sOUT, sSHR, sSHL, sHLT, sDIR, sIND, sIM, sSOP,
+sSTA, sLDA, sADD, sSUB, sAND, sOR, sNOT, sJ, sJN, sJZ, sIN, sOUT, sSHR, sSHL, sHLT, sDIR, sIND, sIM, sSOP, sN,
 writeAC, writeN, writeZ, writeRDM, writeRI, writeOUT, writeREM, writeMEM, selectREM, incrementPC, selectRDM, opULA,
 a0, b0, c0, d0, e0, f0, g0, a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2, a3, b3, c3, d3, e3, f3, g3,
 a4, b4, c4, d4, e4, f4, g4, a5, b5, c5, d5, e5, f5, g5, bcd);
@@ -11,7 +11,7 @@ output [2:0] opULA;
 output [15:0] saida, acumulador, qMEM, qREM, qRDM, qRI, qPC;
 output sNOP, sSTA, sLDA, sADD, sSUB, sAND, sOR, sNOT, sJ, sJN, 
 sJZ, sIN, sOUT, sSHR, sSHL, sHLT, sDIR, sIND, sIM, sSOP, writeAC, writeN, writeZ, writeRDM, writeRI, 
-writeOUT, writeREM, writeMEM, selectREM, incrementPC;
+writeOUT, writeREM, writeMEM, selectREM, incrementPC, sN;
 output T0, T1, T2, T3, T4, T5, T6, T7, T8, T9;
 output [19:0] bcd;
 
@@ -21,6 +21,7 @@ a4, b4, c4, d4, e4, f4, g4, a5, b5, c5, d5, e5, f5, g5;
 
 
 // saidas para testes
+assign sN = w_N;
 assign bcd = w_bcd;
 assign saida = w_OUT;
 assign qMEM = w_MEM;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Wed Mar 25 22:49:21 2020
+Sat Mar 28 17:28:40 2020
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -15,21 +15,20 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. State Machine - |CPU|Bin2BCD:B2BCD|estado
- 10. User-Specified and Inferred Latches
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Registers Added for RAM Pass-Through Logic
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for Memoria:MEM|altsyncram:ram_rtl_0|altsyncram_dcj1:auto_generated
- 17. Parameter Settings for User Entity Instance: Memoria:MEM
- 18. Parameter Settings for User Entity Instance: Bin2BCD:B2BCD
- 19. Parameter Settings for Inferred Entity Instance: Memoria:MEM|altsyncram:ram_rtl_0
- 20. altsyncram Parameter Settings by Entity Instance
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
- 24. Analysis & Synthesis Suppressed Messages
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Registers Added for RAM Pass-Through Logic
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for Memoria:MEM|altsyncram:ram_rtl_0|altsyncram_dcj1:auto_generated
+ 16. Parameter Settings for User Entity Instance: Memoria:MEM
+ 17. Parameter Settings for User Entity Instance: Bin2BCD:B2BCD
+ 18. Parameter Settings for Inferred Entity Instance: Memoria:MEM|altsyncram:ram_rtl_0
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -56,16 +55,16 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 25 22:49:21 2020      ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 28 17:28:40 2020      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; Processador                                ;
 ; Top-level Entity Name              ; CPU                                        ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 651                                        ;
-;     Total combinational functions  ; 551                                        ;
+; Total logic elements               ; 650                                        ;
+;     Total combinational functions  ; 549                                        ;
 ;     Dedicated logic registers      ; 232                                        ;
 ; Total registers                    ; 232                                        ;
-; Total pins                         ; 237                                        ;
+; Total pins                         ; 238                                        ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 1,048,576                                  ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -212,30 +211,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 651       ;
+; Estimated Total logic elements              ; 650       ;
 ;                                             ;           ;
-; Total combinational functions               ; 551       ;
+; Total combinational functions               ; 549       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 343       ;
-;     -- 3 input functions                    ; 155       ;
-;     -- <=2 input functions                  ; 53        ;
+;     -- 4 input functions                    ; 339       ;
+;     -- 3 input functions                    ; 139       ;
+;     -- <=2 input functions                  ; 71        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 501       ;
+;     -- normal mode                          ; 499       ;
 ;     -- arithmetic mode                      ; 50        ;
 ;                                             ;           ;
 ; Total registers                             ; 232       ;
 ;     -- Dedicated logic registers            ; 232       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 237       ;
+; I/O pins                                    ; 238       ;
 ; Total memory bits                           ; 1048576   ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 309       ;
-; Total fan-out                               ; 7020      ;
+; Total fan-out                               ; 7027      ;
 ; Average fan-out                             ; 5.07      ;
 +---------------------------------------------+-----------+
 
@@ -245,32 +244,32 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
-; |CPU                                      ; 551 (0)           ; 232 (0)      ; 1048576     ; 0            ; 0       ; 0         ; 237  ; 0            ; |CPU                                                                                          ; work         ;
+; |CPU                                      ; 549 (0)           ; 232 (0)      ; 1048576     ; 0            ; 0       ; 0         ; 238  ; 0            ; |CPU                                                                                          ; work         ;
 ;    |BCD7seg:SEG0|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD7seg:SEG0                                                                             ; work         ;
 ;    |BCD7seg:SEG1|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD7seg:SEG1                                                                             ; work         ;
 ;    |BCD7seg:SEG2|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD7seg:SEG2                                                                             ; work         ;
 ;    |BCD7seg:SEG3|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD7seg:SEG3                                                                             ; work         ;
 ;    |BCD7seg:SEG4|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD7seg:SEG4                                                                             ; work         ;
-;    |Bin2BCD:B2BCD|                        ; 81 (81)           ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Bin2BCD:B2BCD                                                                            ; work         ;
+;    |Bin2BCD:B2BCD|                        ; 79 (79)           ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Bin2BCD:B2BCD                                                                            ; work         ;
 ;    |Complemento2SinalMag:CompSinMag|      ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Complemento2SinalMag:CompSinMag                                                          ; work         ;
-;    |DecodificadorInstrucoes:DECOD|        ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DecodificadorInstrucoes:DECOD                                                            ; work         ;
+;    |DecodificadorInstrucoes:DECOD|        ; 26 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DecodificadorInstrucoes:DECOD                                                            ; work         ;
 ;    |FlipFlopD:ffN|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|FlipFlopD:ffN                                                                            ; work         ;
 ;    |FlipFlopD:ffZ|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|FlipFlopD:ffZ                                                                            ; work         ;
 ;    |MUX2:muxREM|                          ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MUX2:muxREM                                                                              ; work         ;
-;    |Memoria:MEM|                          ; 149 (31)          ; 74 (65)      ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM                                                                              ; work         ;
+;    |Memoria:MEM|                          ; 148 (30)          ; 74 (65)      ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM                                                                              ; work         ;
 ;       |altsyncram:ram_rtl_0|              ; 118 (0)           ; 9 (0)        ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM|altsyncram:ram_rtl_0                                                         ; work         ;
 ;          |altsyncram_dcj1:auto_generated| ; 118 (6)           ; 9 (9)        ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM|altsyncram:ram_rtl_0|altsyncram_dcj1:auto_generated                          ; work         ;
 ;             |decode_k8a:rden_decode_b|    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM|altsyncram:ram_rtl_0|altsyncram_dcj1:auto_generated|decode_k8a:rden_decode_b ; work         ;
 ;             |decode_rsa:decode2|          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM|altsyncram:ram_rtl_0|altsyncram_dcj1:auto_generated|decode_rsa:decode2       ; work         ;
 ;             |mux_qob:mux3|                ; 96 (96)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM|altsyncram:ram_rtl_0|altsyncram_dcj1:auto_generated|mux_qob:mux3             ; work         ;
-;    |ProgramCounter:PC|                    ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ProgramCounter:PC                                                                        ; work         ;
+;    |ProgramCounter:PC|                    ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ProgramCounter:PC                                                                        ; work         ;
 ;    |Registrador:AC|                       ; 0 (0)             ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Registrador:AC                                                                           ; work         ;
 ;    |Registrador:OUT|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Registrador:OUT                                                                          ; work         ;
 ;    |Registrador:RDM|                      ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Registrador:RDM                                                                          ; work         ;
 ;    |Registrador:REM|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Registrador:REM                                                                          ; work         ;
 ;    |Registrador:RI|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Registrador:RI                                                                           ; work         ;
-;    |ULA:ULA|                              ; 105 (105)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:ULA                                                                                  ; work         ;
-;    |UnidadeControle:UC|                   ; 67 (67)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeControle:UC                                                                       ; work         ;
+;    |ULA:ULA|                              ; 106 (106)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:ULA                                                                                  ; work         ;
+;    |UnidadeControle:UC|                   ; 76 (76)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeControle:UC                                                                       ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -299,32 +298,6 @@ Encoding Type:  One-Hot
 +----------------------------------+--------------+----------------------------------+---------------+-------------------------+----------------+------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                        ;
-+-----------------------------------------------------+-----------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal         ; Free of Timing Hazards ;
-+-----------------------------------------------------+-----------------------------+------------------------+
-; DecodificadorInstrucoes:DECOD|operacao[15]          ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[14]          ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[13]          ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[12]          ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[11]          ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[10]          ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[9]           ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[8]           ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[7]           ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[6]           ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[5]           ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[4]           ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[3]           ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[2]           ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[1]           ; Registrador:RI|conteudo[15] ; yes                    ;
-; DecodificadorInstrucoes:DECOD|operacao[0]           ; Registrador:RI|conteudo[15] ; yes                    ;
-; Number of user-specified and inferred latches = 16  ;                             ;                        ;
-+-----------------------------------------------------+-----------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
 +----------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                         ;
 +---------------------------------------+------------------------------------+
@@ -345,7 +318,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Total registers                              ; 232   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 31    ;
+; Number of registers using Synchronous Load   ; 47    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 156   ;
@@ -370,7 +343,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Memoria:MEM|ram_rtl_0_bypass[50]        ; 1       ;
 ; Memoria:MEM|ram_rtl_0_bypass[52]        ; 1       ;
 ; Memoria:MEM|ram_rtl_0_bypass[54]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[53]        ; 1       ;
 ; Memoria:MEM|ram_rtl_0_bypass[56]        ; 1       ;
 ; Memoria:MEM|ram_rtl_0_bypass[55]        ; 1       ;
 ; Memoria:MEM|ram_rtl_0_bypass[58]        ; 1       ;
@@ -379,7 +351,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Memoria:MEM|ram_rtl_0_bypass[62]        ; 1       ;
 ; Memoria:MEM|ram_rtl_0_bypass[61]        ; 1       ;
 ; Memoria:MEM|ram_rtl_0_bypass[64]        ; 1       ;
-; Total number of inverted registers = 21 ;         ;
+; Total number of inverted registers = 20 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -456,22 +428,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------+-----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |CPU|Registrador:RDM|conteudo[7] ;
-; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bin[1]      ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[6]      ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[10]     ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[12]     ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[17]     ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[3]      ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 48 LEs               ; 8 LEs                  ; Yes        ; |CPU|UnidadeControle:UC|t9       ;
-; 8:1                ; 14 bits   ; 70 LEs        ; 56 LEs               ; 14 LEs                 ; No         ; |CPU|ULA:ULA|Mux14               ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |CPU|Bin2BCD:B2BCD|Mux0          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|ProgramCounter:PC|counter[6] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |CPU|Registrador:RDM|conteudo[7]  ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bin[1]       ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[6]       ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[10]      ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[12]      ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[17]      ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[3]       ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 48 LEs               ; 8 LEs                  ; Yes        ; |CPU|UnidadeControle:UC|t9        ;
+; 8:1                ; 14 bits   ; 70 LEs        ; 56 LEs               ; 14 LEs                 ; No         ; |CPU|ULA:ULA|Mux12                ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |CPU|Bin2BCD:B2BCD|Mux1           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
 +----------------------------------------------------------------------------------------+
@@ -595,26 +568,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 237                         ;
+; boundary_port         ; 238                         ;
 ; cycloneiii_ff         ; 232                         ;
-;     ENA               ; 126                         ;
-;     ENA SLD           ; 30                          ;
+;     ENA               ; 110                         ;
+;     ENA SLD           ; 46                          ;
 ;     SLD               ; 1                           ;
 ;     plain             ; 75                          ;
-; cycloneiii_lcell_comb ; 560                         ;
+; cycloneiii_lcell_comb ; 559                         ;
 ;     arith             ; 50                          ;
-;         2 data inputs ; 34                          ;
-;         3 data inputs ; 16                          ;
-;     normal            ; 510                         ;
+;         2 data inputs ; 35                          ;
+;         3 data inputs ; 15                          ;
+;     normal            ; 509                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 15                          ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 139                         ;
-;         4 data inputs ; 343                         ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 124                         ;
+;         4 data inputs ; 339                         ;
 ; cycloneiii_ram_block  ; 128                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 4.56                        ;
+; Max LUT depth         ; 12.50                       ;
+; Average LUT depth     ; 4.95                        ;
 +-----------------------+-----------------------------+
 
 
@@ -623,7 +596,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -633,7 +606,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Wed Mar 25 22:45:29 2020
+    Info: Processing started: Sat Mar 28 17:25:17 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file Memoria.v
@@ -666,39 +639,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file Sinal7s
     Info (12023): Found entity 1: Sinal7seg
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
 Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:PC"
-Warning (10230): Verilog HDL assignment warning at ProgramCounter.v(19): truncated value with size 32 to match size of target (16)
 Info (12128): Elaborating entity "MUX2" for hierarchy "MUX2:muxREM"
 Info (12128): Elaborating entity "Registrador" for hierarchy "Registrador:REM"
 Info (12128): Elaborating entity "Memoria" for hierarchy "Memoria:MEM"
-Warning (10850): Verilog HDL warning at Memoria.v(21): number of words (49) in memory file does not match the number of elements in the address range [0:65535]
+Warning (10850): Verilog HDL warning at Memoria.v(21): number of words (41) in memory file does not match the number of elements in the address range [0:65535]
 Info (12128): Elaborating entity "MUX4" for hierarchy "MUX4:muxRDM"
 Info (12128): Elaborating entity "Complemento2SinalMag" for hierarchy "Complemento2SinalMag:CompSinMag"
-Warning (10230): Verilog HDL assignment warning at Complemento2SinalMag.v(16): truncated value with size 32 to match size of target (16)
 Info (12128): Elaborating entity "Bin2BCD" for hierarchy "Bin2BCD:B2BCD"
-Warning (10230): Verilog HDL assignment warning at Bin2BCD.v(74): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at Bin2BCD.v(82): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at Bin2BCD.v(94): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Bin2BCD.v(82): truncated value with size 20 to match size of target (4)
 Info (12128): Elaborating entity "Sinal7seg" for hierarchy "Sinal7seg:SEG5"
 Info (12128): Elaborating entity "BCD7seg" for hierarchy "BCD7seg:SEG4"
 Info (12128): Elaborating entity "DecodificadorInstrucoes" for hierarchy "DecodificadorInstrucoes:DECOD"
-Warning (10270): Verilog HDL Case Statement warning at DecodificadorInstrucoes.v(28): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at DecodificadorInstrucoes.v(28): inferring latch(es) for variable "operacao", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "operacao[0]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[1]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[2]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[3]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[4]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[5]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[6]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[7]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[8]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[9]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[10]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[11]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[12]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[13]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[14]" at DecodificadorInstrucoes.v(28)
-Info (10041): Inferred latch for "operacao[15]" at DecodificadorInstrucoes.v(28)
 Info (12128): Elaborating entity "UnidadeControle" for hierarchy "UnidadeControle:UC"
 Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA"
 Info (12128): Elaborating entity "FlipFlopD" for hierarchy "FlipFlopD:ffN"
@@ -774,16 +725,16 @@ Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/pedro/projetos_quartus/Processador/output_files/Processador.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1049 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1050 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 219 output pins
+    Info (21059): Implemented 220 output pins
     Info (21061): Implemented 684 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 28 warnings
     Info: Peak virtual memory: 1152 megabytes
-    Info: Processing ended: Wed Mar 25 22:49:21 2020
-    Info: Elapsed time: 00:03:52
-    Info: Total CPU time (on all processors): 00:04:10
+    Info: Processing ended: Sat Mar 28 17:28:40 2020
+    Info: Elapsed time: 00:03:23
+    Info: Total CPU time (on all processors): 00:03:50
 
 
 +------------------------------------------+
