@@ -1,3 +1,4 @@
+// Contador de Programa PC
 module ProgramCounter(clk, writePC, incrementPC, data, q);
 
 input [15:0] data;
@@ -12,13 +13,13 @@ end
 
 always @ (posedge clk) begin
 	case (writePC)
-		1'b0: begin
-			if (incrementPC)
+		1'b0: begin // Sem novo valor
+			if (incrementPC) // incremento da contagem
 				counter <= counter + 16'b1;
-			else
+			else // mantem contagem
 				counter <= counter;
 		end
-		1'b1:
+		1'b1: // Novo valor escrito no PC
 			counter <= data;
 	endcase
 end

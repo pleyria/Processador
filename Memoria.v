@@ -1,7 +1,4 @@
-// Quartus II Verilog Template
-// Single port RAM with single read/write address and initial contents 
-// specified with an initial block
-
+// Memoria RAM
 module Memoria
 #(parameter DATA_WIDTH=16, parameter ADDR_WIDTH=16)
 (
@@ -14,9 +11,7 @@ module Memoria
 	// Declare the RAM variable
 	reg [DATA_WIDTH-1:0] ram[2**ADDR_WIDTH-1:0];
 
-	// Specify the initial contents.  You can also use the $readmemb
-	// system task to initialize the RAM variable from a text file.
-	// See the $readmemb template page for details.
+	// Le os valores iniciais do arquivo "init.txt"
 	initial begin
 		$readmemb("init.txt", ram);
 	end 
@@ -29,9 +24,7 @@ module Memoria
 		end
 	end
 
-	// Continuous assignment implies read returns NEW data.
-	// This is the natural behavior of the TriMatrix memory
-	// blocks in Single Port mode.  
+	// Entrada de endereco especifica a saida
 	assign q = ram[addr];
 
 endmodule

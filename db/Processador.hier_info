@@ -43,6 +43,7 @@ T6 << UnidadeControle:UC.T6
 T7 << UnidadeControle:UC.T7
 T8 << UnidadeControle:UC.T8
 T9 << UnidadeControle:UC.T9
+read << UnidadeControle:UC.read
 acumulador[0] << w_AC[0].DB_MAX_OUTPUT_PORT_TYPE
 acumulador[1] << w_AC[1].DB_MAX_OUTPUT_PORT_TYPE
 acumulador[2] << w_AC[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -1246,6 +1247,7 @@ sIN => RwriteRDM.IN1
 sIN => RwriteREM.IN1
 sIN => RselectRDM.IN1
 sIN => got0.IN1
+sIN => Rread.IN1
 sOUT => RwriteRDM.IN1
 sOUT => RwriteRDM.IN1
 sOUT => RwriteRDM.IN1
@@ -1262,7 +1264,7 @@ sSHR => got0.IN1
 sSHL => RwriteAC.IN1
 sSHL => RopULA.IN1
 sSHL => got0.IN1
-sHLT => ~NO_FANOUT~
+sHLT => Decoder0.IN0
 sDIR => RwriteAC.IN1
 sDIR => RwritePC.IN1
 sDIR => RwriteRDM.IN1
@@ -1312,6 +1314,7 @@ T6 <= t6.DB_MAX_OUTPUT_PORT_TYPE
 T7 <= t7.DB_MAX_OUTPUT_PORT_TYPE
 T8 <= t8.DB_MAX_OUTPUT_PORT_TYPE
 T9 <= t9.DB_MAX_OUTPUT_PORT_TYPE
+read <= Rread.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |CPU|Registrador:AC

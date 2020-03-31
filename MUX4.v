@@ -1,3 +1,5 @@
+// Multiplexador
+// 4 opcoes de 16 bits
 module MUX4 (select, in00, in01, in10, in11, q);
 
 input [1:0] select;

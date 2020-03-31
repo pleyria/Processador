@@ -1,3 +1,4 @@
+// Circuito sequencial para converter binario em BCD
 module Bin2BCD (clock, bin, start, bcd);
 
 input clock, start;

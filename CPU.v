@@ -1,4 +1,5 @@
-module CPU (clk, clkBCD, entrada, saida, T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, acumulador, qMEM, qREM, qRDM, qRI, qPC, sNOP,
+// Integracao de todos os componentes do processador
+module CPU (clk, clkBCD, entrada, saida, T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, read, acumulador, qMEM, qREM, qRDM, qRI, qPC, sNOP,
 sSTA, sLDA, sADD, sSUB, sAND, sOR, sNOT, sJ, sJN, sJZ, sIN, sOUT, sSHR, sSHL, sHLT, sDIR, sIND, sIM, sSOP, sN,
 writeAC, writeN, writeZ, writeRDM, writeRI, writeOUT, writeREM, writeMEM, selectREM, incrementPC, selectRDM, opULA,
 a0, b0, c0, d0, e0, f0, g0, a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2, a3, b3, c3, d3, e3, f3, g3,
@@ -12,7 +13,7 @@ output [15:0] saida, acumulador, qMEM, qREM, qRDM, qRI, qPC;
 output sNOP, sSTA, sLDA, sADD, sSUB, sAND, sOR, sNOT, sJ, sJN, 
 sJZ, sIN, sOUT, sSHR, sSHL, sHLT, sDIR, sIND, sIM, sSOP, writeAC, writeN, writeZ, writeRDM, writeRI, 
 writeOUT, writeREM, writeMEM, selectREM, incrementPC, sN;
-output T0, T1, T2, T3, T4, T5, T6, T7, T8, T9;
+output T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, read;
 output [19:0] bcd;
 
 // display
@@ -173,7 +174,8 @@ UnidadeControle UC (
 	.T6(T6),
 	.T7(T7),
 	.T8(T8),
-	.T9(T9));
+	.T9(T9),
+	.read(read));
 
 Registrador AC (.clk(clk), .write(w_writeAC), .data(w_ULA), .q(w_AC));
 

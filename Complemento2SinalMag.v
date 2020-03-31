@@ -1,3 +1,4 @@
+// Decodificador complemento de dois para sinal-magnitude
 module Complemento2SinalMag (in, out, sinal);
 
 input [15:0] in;

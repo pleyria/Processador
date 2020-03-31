@@ -1,3 +1,5 @@
+// Multiplexador
+// 2 opcoes de 16 bits
 module MUX2 (select, in0, in1, q);
 
 input select;

@@ -1,3 +1,4 @@
+// decodificador de BCD para display de sete segmentos
 module BCD7seg (bcd, a, b, c, d, e, f, g);
 
 input [3:0] bcd;
@@ -6,6 +7,9 @@ reg [6:0] segmentos;
 
 always @(*) begin
 	case(bcd)
+		// LEDs tipo anodo comum
+		// 0 = ligado
+		// 1 = desligado
 		4'b0000: segmentos = 7'b0000001;
 		4'b0001: segmentos = 7'b1001111;
 		4'b0010: segmentos = 7'b0010010;
