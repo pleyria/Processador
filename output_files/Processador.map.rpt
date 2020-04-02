@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Tue Mar 31 15:17:39 2020
+Wed Apr  1 22:44:48 2020
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -55,16 +55,16 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 31 15:17:39 2020      ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr  1 22:44:48 2020      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; Processador                                ;
 ; Top-level Entity Name              ; CPU                                        ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 653                                        ;
-;     Total combinational functions  ; 553                                        ;
-;     Dedicated logic registers      ; 232                                        ;
-; Total registers                    ; 232                                        ;
-; Total pins                         ; 239                                        ;
+; Total logic elements               ; 631                                        ;
+;     Total combinational functions  ; 556                                        ;
+;     Dedicated logic registers      ; 211                                        ;
+; Total registers                    ; 211                                        ;
+; Total pins                         ; 71                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 1,048,576                                  ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -77,6 +77,7 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                                      ; CPU                ; Processador        ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -189,6 +190,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Bin2BCD.v                                    ; yes             ; User Verilog HDL File                                 ; /home/pedro/projetos_quartus/Processador/Bin2BCD.v                                    ;         ;
 ; BCD7seg.v                                    ; yes             ; User Verilog HDL File                                 ; /home/pedro/projetos_quartus/Processador/BCD7seg.v                                    ;         ;
 ; Sinal7seg.v                                  ; yes             ; User Verilog HDL File                                 ; /home/pedro/projetos_quartus/Processador/Sinal7seg.v                                  ;         ;
+; Debouncer.v                                  ; yes             ; User Verilog HDL File                                 ; /home/pedro/projetos_quartus/Processador/Debouncer.v                                  ;         ;
 ; altsyncram.tdf                               ; yes             ; Megafunction                                          ; /home/pedro/altera/15.0/quartus/libraries/megafunctions/altsyncram.tdf                ;         ;
 ; stratix_ram_block.inc                        ; yes             ; Megafunction                                          ; /home/pedro/altera/15.0/quartus/libraries/megafunctions/stratix_ram_block.inc         ;         ;
 ; lpm_mux.inc                                  ; yes             ; Megafunction                                          ; /home/pedro/altera/15.0/quartus/libraries/megafunctions/lpm_mux.inc                   ;         ;
@@ -206,37 +208,37 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 653       ;
-;                                             ;           ;
-; Total combinational functions               ; 553       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 355       ;
-;     -- 3 input functions                    ; 131       ;
-;     -- <=2 input functions                  ; 67        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 503       ;
-;     -- arithmetic mode                      ; 50        ;
-;                                             ;           ;
-; Total registers                             ; 232       ;
-;     -- Dedicated logic registers            ; 232       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 239       ;
-; Total memory bits                           ; 1048576   ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 309       ;
-; Total fan-out                               ; 7060      ;
-; Average fan-out                             ; 5.08      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 631                 ;
+;                                             ;                     ;
+; Total combinational functions               ; 556                 ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 345                 ;
+;     -- 3 input functions                    ; 158                 ;
+;     -- <=2 input functions                  ; 53                  ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 506                 ;
+;     -- arithmetic mode                      ; 50                  ;
+;                                             ;                     ;
+; Total registers                             ; 211                 ;
+;     -- Dedicated logic registers            ; 211                 ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 71                  ;
+; Total memory bits                           ; 1048576             ;
+;                                             ;                     ;
+; Embedded Multiplier 9-bit elements          ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; Debouncer:DEB|saida ;
+; Maximum fan-out                             ; 286                 ;
+; Total fan-out                               ; 6670                ;
+; Average fan-out                             ; 6.43                ;
++---------------------------------------------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -244,32 +246,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
-; |CPU                                      ; 553 (0)           ; 232 (0)      ; 1048576     ; 0            ; 0       ; 0         ; 239  ; 0            ; |CPU                                                                                          ; work         ;
+; |CPU                                      ; 556 (0)           ; 211 (0)      ; 1048576     ; 0            ; 0       ; 0         ; 71   ; 0            ; |CPU                                                                                          ; work         ;
 ;    |BCD7seg:SEG0|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD7seg:SEG0                                                                             ; work         ;
 ;    |BCD7seg:SEG1|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD7seg:SEG1                                                                             ; work         ;
 ;    |BCD7seg:SEG2|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD7seg:SEG2                                                                             ; work         ;
 ;    |BCD7seg:SEG3|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD7seg:SEG3                                                                             ; work         ;
 ;    |BCD7seg:SEG4|                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|BCD7seg:SEG4                                                                             ; work         ;
-;    |Bin2BCD:B2BCD|                        ; 80 (80)           ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Bin2BCD:B2BCD                                                                            ; work         ;
+;    |Bin2BCD:B2BCD|                        ; 81 (81)           ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Bin2BCD:B2BCD                                                                            ; work         ;
 ;    |Complemento2SinalMag:CompSinMag|      ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Complemento2SinalMag:CompSinMag                                                          ; work         ;
-;    |DecodificadorInstrucoes:DECOD|        ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DecodificadorInstrucoes:DECOD                                                            ; work         ;
+;    |Debouncer:DEB|                        ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Debouncer:DEB                                                                            ; work         ;
+;    |DecodificadorInstrucoes:DECOD|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DecodificadorInstrucoes:DECOD                                                            ; work         ;
 ;    |FlipFlopD:ffN|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|FlipFlopD:ffN                                                                            ; work         ;
 ;    |FlipFlopD:ffZ|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|FlipFlopD:ffZ                                                                            ; work         ;
 ;    |MUX2:muxREM|                          ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MUX2:muxREM                                                                              ; work         ;
-;    |Memoria:MEM|                          ; 149 (31)          ; 74 (65)      ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM                                                                              ; work         ;
+;    |MUX4:muxRDM|                          ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|MUX4:muxRDM                                                                              ; work         ;
+;    |Memoria:MEM|                          ; 148 (30)          ; 74 (65)      ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM                                                                              ; work         ;
 ;       |altsyncram:ram_rtl_0|              ; 118 (0)           ; 9 (0)        ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM|altsyncram:ram_rtl_0                                                         ; work         ;
 ;          |altsyncram_dcj1:auto_generated| ; 118 (6)           ; 9 (9)        ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM|altsyncram:ram_rtl_0|altsyncram_dcj1:auto_generated                          ; work         ;
 ;             |decode_k8a:rden_decode_b|    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM|altsyncram:ram_rtl_0|altsyncram_dcj1:auto_generated|decode_k8a:rden_decode_b ; work         ;
 ;             |decode_rsa:decode2|          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM|altsyncram:ram_rtl_0|altsyncram_dcj1:auto_generated|decode_rsa:decode2       ; work         ;
 ;             |mux_qob:mux3|                ; 96 (96)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Memoria:MEM|altsyncram:ram_rtl_0|altsyncram_dcj1:auto_generated|mux_qob:mux3             ; work         ;
-;    |ProgramCounter:PC|                    ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ProgramCounter:PC                                                                        ; work         ;
+;    |ProgramCounter:PC|                    ; 19 (19)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ProgramCounter:PC                                                                        ; work         ;
 ;    |Registrador:AC|                       ; 0 (0)             ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Registrador:AC                                                                           ; work         ;
-;    |Registrador:OUT|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Registrador:OUT                                                                          ; work         ;
 ;    |Registrador:RDM|                      ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Registrador:RDM                                                                          ; work         ;
 ;    |Registrador:REM|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Registrador:REM                                                                          ; work         ;
-;    |Registrador:RI|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Registrador:RI                                                                           ; work         ;
+;    |Registrador:RI|                       ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Registrador:RI                                                                           ; work         ;
 ;    |ULA:ULA|                              ; 105 (105)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:ULA                                                                                  ; work         ;
-;    |UnidadeControle:UC|                   ; 77 (77)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeControle:UC                                                                       ; work         ;
+;    |UnidadeControle:UC|                   ; 79 (79)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UnidadeControle:UC                                                                       ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -316,12 +319,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 232   ;
+; Total registers                              ; 211   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 47    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 156   ;
+; Number of registers using Clock Enable       ; 131   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -331,27 +334,27 @@ Encoding Type:  One-Hot
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; UnidadeControle:UC|t0                   ; 5       ;
-; Memoria:MEM|ram_rtl_0_bypass[34]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[36]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[38]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[40]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[42]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[44]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[46]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[48]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[50]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[52]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[54]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[53]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[56]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[55]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[58]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[57]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[60]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[62]        ; 1       ;
-; Memoria:MEM|ram_rtl_0_bypass[61]        ; 1       ;
+; UnidadeControle:UC|t0                   ; 6       ;
 ; Memoria:MEM|ram_rtl_0_bypass[64]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[61]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[62]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[60]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[55]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[56]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[57]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[58]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[54]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[51]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[52]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[50]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[48]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[46]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[44]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[42]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[40]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[38]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[36]        ; 1       ;
+; Memoria:MEM|ram_rtl_0_bypass[34]        ; 1       ;
 ; Total number of inverted registers = 21 ;         ;
 +-----------------------------------------+---------+
 
@@ -434,17 +437,17 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |CPU|Registrador:RDM|conteudo[8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|ProgramCounter:PC|counter[9] ;
-; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bin[1]       ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[6]       ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[10]      ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[12]      ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[16]      ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[3]       ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 56 LEs               ; 8 LEs                  ; Yes        ; |CPU|UnidadeControle:UC|t9        ;
-; 8:1                ; 14 bits   ; 70 LEs        ; 56 LEs               ; 14 LEs                 ; No         ; |CPU|ULA:ULA|Mux12                ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |CPU|Bin2BCD:B2BCD|Mux1           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|ProgramCounter:PC|counter[8] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |CPU|Debouncer:DEB|count[0]       ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bin[2]       ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[4]       ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[9]       ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[14]      ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[18]      ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |CPU|Bin2BCD:B2BCD|r_bcd[2]       ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 56 LEs               ; 8 LEs                  ; Yes        ; |CPU|UnidadeControle:UC|t5        ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |CPU|Bin2BCD:B2BCD|Mux0           ;
+; 8:1                ; 14 bits   ; 70 LEs        ; 56 LEs               ; 14 LEs                 ; No         ; |CPU|ULA:ULA|Mux3                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
@@ -569,26 +572,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 239                         ;
-; cycloneiii_ff         ; 232                         ;
-;     ENA               ; 110                         ;
+; boundary_port         ; 71                          ;
+; cycloneiii_ff         ; 211                         ;
+;     ENA               ; 85                          ;
 ;     ENA SLD           ; 46                          ;
 ;     SLD               ; 1                           ;
-;     plain             ; 75                          ;
-; cycloneiii_lcell_comb ; 563                         ;
+;     plain             ; 79                          ;
+; cycloneiii_lcell_comb ; 564                         ;
 ;     arith             ; 50                          ;
 ;         2 data inputs ; 35                          ;
 ;         3 data inputs ; 15                          ;
-;     normal            ; 513                         ;
+;     normal            ; 514                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 16                          ;
-;         2 data inputs ; 25                          ;
-;         3 data inputs ; 116                         ;
-;         4 data inputs ; 355                         ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 143                         ;
+;         4 data inputs ; 345                         ;
 ; cycloneiii_ram_block  ; 128                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 4.83                        ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 4.74                        ;
 +-----------------------+-----------------------------+
 
 
@@ -597,7 +600,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -607,7 +610,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Tue Mar 31 15:17:17 2020
+    Info: Processing started: Wed Apr  1 22:41:17 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file Memoria.v
@@ -641,11 +644,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file Sinal7s
 Info (12021): Found 1 design units, including 1 entities, in source file Debouncer.v
     Info (12023): Found entity 1: Debouncer
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
+Info (12128): Elaborating entity "Debouncer" for hierarchy "Debouncer:DEB"
 Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:PC"
 Info (12128): Elaborating entity "MUX2" for hierarchy "MUX2:muxREM"
 Info (12128): Elaborating entity "Registrador" for hierarchy "Registrador:REM"
 Info (12128): Elaborating entity "Memoria" for hierarchy "Memoria:MEM"
-Warning (10850): Verilog HDL warning at Memoria.v(16): number of words (27) in memory file does not match the number of elements in the address range [0:65535]
+Warning (10850): Verilog HDL warning at Memoria.v(16): number of words (9) in memory file does not match the number of elements in the address range [0:65535]
 Info (12128): Elaborating entity "MUX4" for hierarchy "MUX4:muxRDM"
 Info (12128): Elaborating entity "Complemento2SinalMag" for hierarchy "Complemento2SinalMag:CompSinMag"
 Info (12128): Elaborating entity "Bin2BCD" for hierarchy "Bin2BCD:B2BCD"
@@ -694,6 +698,22 @@ Info (12133): Instantiated megafunction "Memoria:MEM|altsyncram:ram_rtl_0" with 
     Info (12134): Parameter "INIT_FILE" = "db/Processador.ram0_Memoria_e03d9be0.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_dcj1.tdf
     Info (12023): Found entity 1: altsyncram_dcj1
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/pedro/projetos_quartus/Processador/db/Processador.ram0_Memoria_e03d9be0.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_rsa.tdf
     Info (12023): Found entity 1: decode_rsa
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_k8a.tdf
@@ -712,16 +732,16 @@ Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/pedro/projetos_quartus/Processador/output_files/Processador.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1053 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 862 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 221 output pins
-    Info (21061): Implemented 686 logic cells
+    Info (21059): Implemented 53 output pins
+    Info (21061): Implemented 663 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 1069 megabytes
-    Info: Processing ended: Tue Mar 31 15:17:39 2020
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:48
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 1152 megabytes
+    Info: Processing ended: Wed Apr  1 22:44:48 2020
+    Info: Elapsed time: 00:03:31
+    Info: Total CPU time (on all processors): 00:03:55
 
 
 +------------------------------------------+

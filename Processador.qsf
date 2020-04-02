@@ -38,7 +38,7 @@
 
 
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE AUTO
+set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY CPU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:53:49  MARCH 17, 2020"
@@ -60,9 +60,7 @@ set_global_assignment -name VERILOG_FILE UnidadeControle.v
 set_global_assignment -name VERILOG_FILE CPU.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE CPU.vwf
 set_global_assignment -name VERILOG_FILE Complemento2SinalMag.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE sinalMag.vwf
 set_global_assignment -name VERILOG_FILE Bin2BCD.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Bin2BCD.vwf
 set_global_assignment -name VERILOG_FILE BCD7seg.v
 set_global_assignment -name VERILOG_FILE Sinal7seg.v
 set_global_assignment -name ENABLE_OCT_DONE OFF
@@ -73,11 +71,40 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
-set_global_assignment -name VECTOR_WAVEFORM_FILE PC.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE ula.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE FlipFlop.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE Debouncer.v
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_AB28 -to entrada[0]
+set_location_assignment PIN_AC28 -to entrada[1]
+set_location_assignment PIN_AC27 -to entrada[2]
+set_location_assignment PIN_AD27 -to entrada[3]
+set_location_assignment PIN_AB27 -to entrada[4]
+set_location_assignment PIN_AC26 -to entrada[5]
+set_location_assignment PIN_AD26 -to entrada[6]
+set_location_assignment PIN_AB26 -to entrada[7]
+set_location_assignment PIN_AC25 -to entrada[8]
+set_location_assignment PIN_AB25 -to entrada[9]
+set_location_assignment PIN_AC24 -to entrada[10]
+set_location_assignment PIN_AB24 -to entrada[11]
+set_location_assignment PIN_AB23 -to entrada[12]
+set_location_assignment PIN_AA24 -to entrada[13]
+set_location_assignment PIN_AA23 -to entrada[14]
+set_location_assignment PIN_AA22 -to entrada[15]
+set_location_assignment PIN_M23 -to clk
+set_location_assignment PIN_Y2 -to clkBCD
+set_location_assignment PIN_G19 -to T0
+set_location_assignment PIN_F19 -to T1
+set_location_assignment PIN_E19 -to T2
+set_location_assignment PIN_F21 -to T3
+set_location_assignment PIN_F18 -to T4
+set_location_assignment PIN_E18 -to T5
+set_location_assignment PIN_J19 -to T6
+set_location_assignment PIN_H19 -to T7
+set_location_assignment PIN_J17 -to T8
+set_location_assignment PIN_G17 -to T9
+set_location_assignment PIN_E21 -to read

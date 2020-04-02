@@ -2,76 +2,76 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -6.541
-TNS   : -3191.956
+Type  : Slow 1200mV 85C Model Setup 'Debouncer:DEB|saida'
+Slack : -7.429
+TNS   : -3471.124
 
 Type  : Slow 1200mV 85C Model Setup 'clkBCD'
-Slack : -3.437
-TNS   : -113.747
+Slack : -4.609
+TNS   : -159.057
+
+Type  : Slow 1200mV 85C Model Hold 'Debouncer:DEB|saida'
+Slack : 0.310
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clkBCD'
-Slack : 0.324
+Slack : 0.372
 TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.332
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
-Slack : -3.000
-TNS   : -1297.088
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkBCD'
 Slack : -3.000
-TNS   : -54.000
+TNS   : -73.675
 
-Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -5.765
-TNS   : -2788.543
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Debouncer:DEB|saida'
+Slack : -2.693
+TNS   : -1579.276
+
+Type  : Slow 1200mV 0C Model Setup 'Debouncer:DEB|saida'
+Slack : -6.652
+TNS   : -3113.527
 
 Type  : Slow 1200mV 0C Model Setup 'clkBCD'
-Slack : -2.989
-TNS   : -97.539
+Slack : -4.218
+TNS   : -139.863
+
+Type  : Slow 1200mV 0C Model Hold 'Debouncer:DEB|saida'
+Slack : 0.316
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clkBCD'
-Slack : 0.289
+Slack : 0.336
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.294
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
-Slack : -3.000
-TNS   : -1297.088
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkBCD'
 Slack : -3.000
-TNS   : -54.000
+TNS   : -73.675
 
-Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -3.402
-TNS   : -1574.484
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Debouncer:DEB|saida'
+Slack : -2.649
+TNS   : -1556.748
+
+Type  : Fast 1200mV 0C Model Setup 'Debouncer:DEB|saida'
+Slack : -3.346
+TNS   : -1451.233
 
 Type  : Fast 1200mV 0C Model Setup 'clkBCD'
-Slack : -1.501
-TNS   : -45.342
+Slack : -1.819
+TNS   : -53.682
 
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.163
+Type  : Fast 1200mV 0C Model Hold 'Debouncer:DEB|saida'
+Slack : 0.118
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clkBCD'
-Slack : 0.177
+Slack : 0.133
 TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
-Slack : -3.000
-TNS   : -769.367
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkBCD'
 Slack : -3.000
-TNS   : -57.340
+TNS   : -61.599
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Debouncer:DEB|saida'
+Slack : -1.000
+TNS   : -668.000
 
 ------------------------------------------------------------
