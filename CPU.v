@@ -1,4 +1,3 @@
-// falta terminar a pinagem
 // Integracao de todos os componentes do processador
 module CPU (clk, clkBCD, entrada, T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, read, a0, b0, c0, d0, e0, 
 f0, g0, a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2, a3, b3, c3, d3, e3, f3, g3, a4, b4,
