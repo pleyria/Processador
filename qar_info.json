@@ -1,0 +1,7 @@
+{
+	"common_dir" : "/home/pedro/projetos_quartus/Processador/",
+	"acds_version" : "Version 15.0.0",
+	"platform" : "linux",
+	"os" : "Ubuntu 20.04.2",
+	"qpf" : "Processador.qpf"
+}

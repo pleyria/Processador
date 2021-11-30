@@ -1,5 +1,6 @@
 // Unidade de controle do processador
 module UnidadeControle (
+	input enter,
 	input clk,
 	input sNOP,
 	input sSTA,
@@ -89,47 +90,50 @@ assign read = Rread;
 
 initial begin
 	{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000001;
+	Rread = 0;
 end
 	
 // Logica sequencial da contagem de tempo
 always @ (posedge clk) begin
-	case (sHLT)
-		0: begin // programa em execucao
-			if (got0 || t9) begin
-				{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000001;
+	if (!Rread) begin
+		case (sHLT)
+			0: begin // programa em execucao
+				if (got0 || t9) begin
+					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000001;
+				end
+				else if (t0) begin
+					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000010;
+				end
+				else if (t1) begin
+					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000100;
+				end
+				else if (t2) begin
+					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000001000;
+				end
+				else if (t3) begin
+					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000010000;
+				end
+				else if (t4) begin
+					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000100000;
+				end
+				else if (t5) begin
+					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0001000000;
+				end
+				else if (t6) begin
+					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0010000000;
+				end
+				else if (t7) begin
+					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0100000000;
+				end
+				else if (t8) begin
+					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b1000000000;
+				end
 			end
-			else if (t0) begin
-				{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000010;
+			1: begin // fim da execucao
+				{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000000;
 			end
-			else if (t1) begin
-				{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000100;
-			end
-			else if (t2) begin
-				{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000001000;
-			end
-			else if (t3) begin
-				{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000010000;
-			end
-			else if (t4) begin
-				{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000100000;
-			end
-			else if (t5) begin
-				{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0001000000;
-			end
-			else if (t6) begin
-				{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0010000000;
-			end
-			else if (t7) begin
-				{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0100000000;
-			end
-			else if (t8) begin
-				{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b1000000000;
-			end
-		end
-		1: begin // fim da execucao
-			{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000000;
-		end
-	endcase
+		endcase
+	end
 end
 
 always @ (*) begin // logica combinacional dos sinais de controle
@@ -150,7 +154,7 @@ always @ (*) begin // logica combinacional dos sinais de controle
 	RopULA[2] = t3 && sSOP && (sNOT || sSHR || sSHL) || sLDA && (t5 && sIM || t7 && sDIR || t9 && sIND);
 	RincrementPC = t1 || t3 && sIM && (sJ || sJN || sJZ) || t3 && (sDIR || sIND) && (sJN && !sN || sJZ && !sZ) || t4 && sDIR && (sSTA || sLDA || sADD || sSUB || sAND || sOR || sIN || sOUT) || t4 && sIND && (sSTA || sLDA || sADD || sSUB || sAND || sOR || sJ || sJN && sN || sJZ && sZ || sIN || sOUT);
 	got0 = t3 && sSOP && (sNOP || sNOT || sSHR || sSHL) || t3 && (sDIR || sIND) && (sJN && !sN || sJZ && !sZ) || t3 && sIM && (sJ || sJN || sJZ) || t5 && sDIR && (sJ || sJN && sN || sJZ && sZ) || t5 && sIM && (sLDA || sADD || sSUB || sAND || sOR || sOUT) || t6 && sIM && sSTA || t7 && sDIR && (sSTA || sLDA || sADD || sSUB || sAND || sOR || sIN || sOUT) || t9 && sIND && (sSTA || sLDA || sADD || sSUB || sOR || sJ || sJN && sN || sJZ && sZ || sIN || sOUT);
-	Rread = sIN && (t3 && sIM || t6 && sDIR || t8 && sIND);
+	Rread = sIN && (t3 && sIM || t6 && sDIR || t8 && sIND) && !enter;
 end
 
 endmodule

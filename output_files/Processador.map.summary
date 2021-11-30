@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Wed Apr  1 22:44:48 2020
-Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Web Edition
+Analysis & Synthesis Status : Successful - Tue Nov 30 12:47:21 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Processador
 Top-level Entity Name : CPU
 Family : Cyclone IV E
-Total logic elements : 631
-    Total combinational functions : 556
-    Dedicated logic registers : 211
-Total registers : 211
+Total logic elements : 702
+    Total combinational functions : 626
+    Dedicated logic registers : 265
+Total registers : 265
 Total pins : 71
 Total virtual pins : 0
 Total memory bits : 1,048,576

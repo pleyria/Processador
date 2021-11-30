@@ -1,0 +1,27 @@
+// divisor de frequencia 50Mhz -> 1kHz
+module divisorFreq_1kHz(f_in, f_out);
+
+// frequencia de entrada
+input f_in;
+// frequencia de saida
+input f_out;
+
+// divisor
+// div = f_in/f_out
+parameter div = 22'd50000 - 22'd1;
+
+// contador
+reg[21:0] count = 22'd0;
+
+always @(posedge f_in) begin
+		if (count >= div) begin
+			count = 22'd0;
+			f_out = 1;
+		end
+		else begin
+			count = count + 22'd1;
+			f_out = 0;
+		end;
+end
+	
+endmodule
