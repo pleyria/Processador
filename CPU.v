@@ -45,29 +45,29 @@ wire w_sNOP, w_sSTA, w_sLDA, w_sADD, w_sSUB, w_sAND, w_sOR, w_sNOT, w_sJ, w_sJN,
 w_sOUT, w_sSHR, w_sSHL, w_sSTD, w_sLDD, w_sHLT, w_sDIR, w_sIND, w_sIM, w_sSOP;
 
 // Barramentos de clocks
-wire clk_100Hz;	// clock de 100Hz
-wire clk_1kHz;		// clock de 1kHz
+wire clk_1MHz;	// clock de 1MHz
+wire clk_5MHz;	// clock de 5MHz
 
-// Divisor de frequencia 50MHz -> 100Hz
-divisorFreq_100Hz div100Hz (.f_in(clk_kit), .f_out(clk_100Hz));
+// Divisor de frequencia 50MHz -> 1MHz
+divisorFreq_1MHz div1MHz (.f_in(clk_kit), .f_out(clk_1MHz));
 
-// Divisor de frequencia 50MHz -> 1kHz
-divisorFreq_1kHz div1kHz (.f_in(clk_kit), .f_out(clk_1kHz));
+// Divisor de frequencia 50MHz -> 5MHz
+divisorFreq_5MHz div5MHz (.f_in(clk_kit), .f_out(clk_5MHz));
 
 // Filtro digital (enter)
 Debouncer DEB (.clk_kit(clk_kit), .clk_in(!enter), .clk_out(w_debouncer));
 
 // Contador de programa
-ProgramCounter PC (.clk(clk_100Hz), .writePC(w_writePC), .incrementPC(w_incrementPC), .data(w_RDM), .q(w_PC));
+ProgramCounter PC (.clk(clk_1MHz), .writePC(w_writePC), .incrementPC(w_incrementPC), .data(w_RDM), .q(w_PC));
 
 // Multiplexador para selecao de entrada do REM
 MUX2 muxREM (.select(w_selectREM), .in0(w_RDM), .in1(w_PC), .q(w_muxREM));
 
 // Registrador de endereco da memoria
-Registrador REM (.clk(clk_100Hz), .write(w_writeREM), .data(w_muxREM), .q(w_REM));
+Registrador REM (.clk(clk_1MHz), .write(w_writeREM), .data(w_muxREM), .q(w_REM));
 
 // Memoria principal
-Memoria MEM (.data(w_RDM), .data_t(w_data_p), .addr(w_REM), .addr_t(w_addr_p), .we(w_writeMEM), .clk(clk_100Hz), .tr(w_tr_p), .ldd(w_sLDD), .q(w_MEM), .q_t(w_q_p));
+Memoria MEM (.data(w_RDM), .data_t(w_data_p), .addr(w_REM), .addr_t(w_addr_p), .we(w_writeMEM), .clk(clk_1MHz), .tr(w_tr_p), .ldd(w_sLDD), .q(w_MEM), .q_t(w_q_p));
 
 // Controladora de memoria/disco
 MemoryControl CON(.data_p(w_data_p),
@@ -78,29 +78,29 @@ MemoryControl CON(.data_p(w_data_p),
 	.addr_s(w_addr_s),
 	.tr_s(w_tr_s),
 	.q_s(w_q_s),
-	.pos(w_RDM),
+	.pos(w_RDM[0]),
 	.std(w_trSTD),
 	.ldd(w_trLDD),
-	.clk(clk_100Hz),
+	.clk(clk_1MHz),
 	.waitTR(w_waitTR));
 
 // Disco/Memoria secundaria
-Disco DISC(.data(w_data_s), .addr(w_addr_s), .tr(w_tr_s), .clk(clk_100Hz), .q(w_q_s));
+Disco DISC(.data(w_data_s), .addr(w_addr_s), .tr(w_tr_s), .clk(clk_1MHz), .q(w_q_s));
 
 // Multiplexador para selecao de entrada do RDM
 MUX4 muxRDM (.select(w_selectRDM), .in00(w_AC), .in01(entrada), .in10(w_MEM), .in11(w_MEM), .q(w_muxRDM));
 
 // Registrador de dados da memoria
-Registrador RDM (.clk(clk_100Hz), .write(w_writeRDM), .data(w_muxRDM), .q(w_RDM));
+Registrador RDM (.clk(clk_1MHz), .write(w_writeRDM), .data(w_muxRDM), .q(w_RDM));
 
 // Registrador de instrucoes
-Registrador RI (.clk(clk_100Hz), .write(w_writeRI), .data(w_RDM), .q(w_RI));
+Registrador RI (.clk(clk_1MHz), .write(w_writeRI), .data(w_RDM), .q(w_RI));
 
 // Decodificador de complemento de dois para sinal magnitude
 Complemento2SinalMag CompSinMag(.in(w_RDM), .out(w_CompSinMag), .sinal(w_sinal));
 
 // Decodificador de binario para bcd
-Bin2BCD B2BCD (.clock(clk_1kHz), .bin(w_CompSinMag), .start(w_writeOUT), .bcd(w_bcd));
+Bin2BCD B2BCD (.clock(clk_5MHz), .bin(w_CompSinMag), .start(w_writeOUT), .bcd(w_bcd));
 
 // Decodificador de sinal algebrico para sete segmentos
 Sinal7seg SEG5 (.sinal(w_sinal), .a(a5), .b(b5), .c(c5), .d(d5), .e(e5), .f(f5), .g(g5));
@@ -141,7 +141,7 @@ DecodificadorInstrucoes DECOD (
 // Unidade de controle
 UnidadeControle UC (
 	.enter(w_debouncer),
-	.clk(clk_100Hz),
+	.clk(clk_1MHz),
 	.sNOP(w_sNOP),
 	.sSTA(w_sSTA),
 	.sLDA(w_sLDA),
@@ -195,15 +195,15 @@ UnidadeControle UC (
 	.trLDD(w_trLDD));
 
 // Acumulador
-Registrador AC (.clk(clk_100Hz), .write(w_writeAC), .data(w_ULA), .q(w_AC));
+Registrador AC (.clk(clk_1MHz), .write(w_writeAC), .data(w_ULA), .q(w_AC));
 
 // Unidade logica e aritmetica
 ULA ULA (.select(w_opULA), .X(w_AC), .Y(w_RDM), .resultado(w_ULA), .N(w_ULA_N), .Z(w_ULA_Z));
 
 // Registrador de resultado negativo
-FlipFlopD ffN (.clk(clk_100Hz), .write(w_writeN), .d(w_ULA_N), .q(w_N));
+FlipFlopD ffN (.clk(clk_1MHz), .write(w_writeN), .d(w_ULA_N), .q(w_N));
 
 // Registrador de resultado zero
-FlipFlopD ffZ (.clk(clk_100Hz), .write(w_writeZ), .d(w_ULA_Z), .q(w_Z));
+FlipFlopD ffZ (.clk(clk_1MHz), .write(w_writeZ), .d(w_ULA_Z), .q(w_Z));
 
 endmodule

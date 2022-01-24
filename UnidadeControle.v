@@ -72,6 +72,7 @@ reg got0; // sinal para voltar para o tempo t0
 reg Rread; // sinal para indicar para o usuario quando entrar com dados
 reg Rtr;	// sinal para aguardar a transferencia de dados (1 = espera, 0 = prossegue)
 reg t0, t1, t2, t3, t4, t5, t6, t7, t8, t9;
+reg [3:0] cont; // conta o numero de instrucoes para fz o switch no escalonamento preeptivo
 
 // controle
 reg RwriteAC, RwritePC, RwriteN, RwriteZ, RwriteRDM, RwriteRI, RwriteOUT, RwriteREM, RwriteMEM, RselectREM, RincrementPC, RtrSTD, RtrLDD;
@@ -100,6 +101,7 @@ initial begin
 	{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000001;
 	Rread = 0;
 	Rtr = 0;
+	cont = 4'b0;
 end
 	
 // Logica sequencial da contagem de tempo
@@ -109,6 +111,7 @@ always @ (posedge clk) begin
 			0: begin // programa em execucao
 				if (got0 || t9) begin
 					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000001;
+					cont <= cont + 4'b1;
 				end
 				else if (t0) begin
 					{t9, t8, t7, t6, t5, t4, t3, t2, t1, t0} <= 10'b0000000010;

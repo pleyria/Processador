@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/24/2022 15:21:14"
+// Generated on "01/24/2022 16:06:35"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          CPU_teste
 // 
@@ -46,6 +46,7 @@ wire T9;
 wire [15:0] addr_p;
 wire [15:0] data_p;
 wire [15:0] qMEM;
+wire [15:0] qRDM;
 wire [15:0] qREM;
 wire trLDD;
 wire tr_p;
@@ -69,6 +70,7 @@ CPU_teste i1 (
 	.data_p(data_p),
 	.enter(enter),
 	.qMEM(qMEM),
+	.qRDM(qRDM),
 	.qREM(qREM),
 	.trLDD(trLDD),
 	.tr_p(tr_p),

@@ -88,7 +88,7 @@ always @(posedge clk) begin
 		end
 		S3: begin
 			r_waitTR <= 1;
-			if(count_p <= 16'd49154) begin
+			if(count_p <= 16'd49154) begin // 16'hffff
 				estado <= S1;
 			end
 			else begin
@@ -109,7 +109,7 @@ always @(posedge clk) begin
 		end
 		S6: begin
 			r_waitTR <= 1;
-			if(count_p <= 16'd49154) begin
+			if(count_p <= 16'd49154) begin // 16'hffff
 				estado <= S4;
 			end
 			else begin

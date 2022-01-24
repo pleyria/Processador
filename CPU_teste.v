@@ -1,5 +1,5 @@
 // Integracao de todos os componentes do processador
-module CPU_teste (clk_kit, enter, T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, waitTR, data_p, addr_p, tr_p, qMEM, qREM, trLDD);
+module CPU_teste (clk_kit, enter, T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, waitTR, data_p, addr_p, tr_p, qMEM, qREM, trLDD, qRDM);
 
 // Clock do kit FPGA (50 MHz)
 input clk_kit;
@@ -11,7 +11,8 @@ output T0, T1, T2, T3, T4, T5, T6, T7, T8, T9;
 
 // saidas de teste
 output waitTR, tr_p, trLDD;
-output[15:0] data_p, addr_p, qMEM, qREM;
+output[15:0] data_p, addr_p, qMEM, qREM, qRDM;
+assign qRDM = w_RDM;
 assign trLDD = w_trLDD;
 assign qREM = w_REM;
 assign qMEM = w_MEM;
@@ -57,7 +58,7 @@ MemoryControl CON(.data_p(w_data_p),
 	.addr_s(w_addr_s),
 	.tr_s(w_tr_s),
 	.q_s(w_q_s),
-	.pos(w_RDM),
+	.pos(w_RDM[0]),
 	.std(w_trSTD),
 	.ldd(w_trLDD),
 	.clk(clk_kit),

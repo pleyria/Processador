@@ -312,6 +312,70 @@
 					"strict" : false
 				},
 				{
+					"name" : "qRDM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "qRDM[15]",
+					"strict" : false
+				},
+				{
 					"name" : "clk_kit",
 					"strict" : false
 				},

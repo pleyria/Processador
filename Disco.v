@@ -13,9 +13,15 @@ module Disco
 	
 	// APENAS PARA TESTE
 	// Le os valores iniciais do arquivo "init.txt"
+	/*
 	initial begin
 		$readmemb("init2.txt", disc);
 	end 
+	*/
+	initial begin
+		disc[0] = 16'b0000000101001101; // 333
+      disc[16384] = 16'b0000000110111100; // 444
+	end
 	
 	always @ (posedge clk) begin
 		if (tr) begin
