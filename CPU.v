@@ -30,18 +30,19 @@ output a0, b0, c0, d0, e0, f0, g0;
 
 // Barramentos de sinais de controle
 wire w_writePC, w_incrementPC, w_selectREM, w_writeREM, w_writeMEM, w_writeRDM, w_writeOUT, 
-w_writeRI, w_writeAC, w_writeN, w_writeZ, w_N, w_Z, w_ULA_N, w_ULA_Z, w_debouncer;
+w_writeRI, w_writeAC, w_writeN, w_writeZ, w_N, w_Z, w_ULA_N, w_ULA_Z, w_debouncer, w_waitTR, w_trSTD, w_trLDD, w_tr_p, w_tr_s;
 wire [1:0] w_selectRDM;
 wire [2:0] w_opULA;
 
 // Barramentos de dados ou enderecos 
-wire [15:0] w_PC, w_REM, w_MEM, w_RDM, w_muxREM, w_muxRDM, w_RI, w_AC, w_ULA, w_CompSinMag;
+wire [15:0] w_PC, w_REM, w_MEM, w_RDM, w_muxREM, w_muxRDM, w_RI, w_AC, w_ULA, w_CompSinMag, w_data_p, w_addr_p, w_q_p, w_data_s, w_q_s;
+wire [14:0] w_addr_s;
 wire [19:0] w_bcd;
 wire w_sinal;
 
 // Barramentos de intrucoes
 wire w_sNOP, w_sSTA, w_sLDA, w_sADD, w_sSUB, w_sAND, w_sOR, w_sNOT, w_sJ, w_sJN, w_sJZ, w_sIN,
-w_sOUT, w_sSHR, w_sSHL, w_sHLT, w_sDIR, w_sIND, w_sIM, w_sSOP;
+w_sOUT, w_sSHR, w_sSHL, w_sSTD, w_sLDD, w_sHLT, w_sDIR, w_sIND, w_sIM, w_sSOP;
 
 // Barramentos de clocks
 wire clk_100Hz;	// clock de 100Hz
@@ -66,7 +67,25 @@ MUX2 muxREM (.select(w_selectREM), .in0(w_RDM), .in1(w_PC), .q(w_muxREM));
 Registrador REM (.clk(clk_100Hz), .write(w_writeREM), .data(w_muxREM), .q(w_REM));
 
 // Memoria principal
-Memoria MEM (.data(w_RDM), .addr(w_REM), .we(w_writeMEM), .clk(clk_100Hz), .q(w_MEM));
+Memoria MEM (.data(w_RDM), .data_t(w_data_p), .addr(w_REM), .addr_t(w_addr_p), .we(w_writeMEM), .clk(clk_100Hz), .tr(w_tr_p), .ldd(w_sLDD), .q(w_MEM), .q_t(w_q_p));
+
+// Controladora de memoria/disco
+MemoryControl CON(.data_p(w_data_p),
+	.addr_p(w_addr_p),
+	.tr_p(w_tr_p),
+	.q_p(w_q_p),
+	.data_s(w_data_s),
+	.addr_s(w_addr_s),
+	.tr_s(w_tr_s),
+	.q_s(w_q_s),
+	.pos(w_RDM),
+	.std(w_trSTD),
+	.ldd(w_trLDD),
+	.clk(clk_100Hz),
+	.waitTR(w_waitTR));
+
+// Disco/Memoria secundaria
+Disco DISC(.data(w_data_s), .addr(w_addr_s), .tr(w_tr_s), .clk(clk_100Hz), .q(w_q_s));
 
 // Multiplexador para selecao de entrada do RDM
 MUX4 muxRDM (.select(w_selectRDM), .in00(w_AC), .in01(entrada), .in10(w_MEM), .in11(w_MEM), .q(w_muxRDM));
@@ -112,6 +131,8 @@ DecodificadorInstrucoes DECOD (
 	.sSHR(w_sSHR),
 	.sSHL(w_sSHL),
 	.sHLT(w_sHLT),
+	.sSTD(w_sSTD),
+	.sLDD(w_sLDD),
 	.sDIR(w_sDIR),
 	.sIND(w_sIND),
 	.sIM(w_sIM),
@@ -143,6 +164,9 @@ UnidadeControle UC (
 	.sSOP(w_sSOP),
 	.sN(w_N),
 	.sZ(w_Z),
+	.sSTD(w_sSTD),
+	.sLDD(w_sLDD),
+	.waitTR(w_waitTR),
 	.writeAC(w_writeAC),
 	.writePC(w_writePC),
 	.writeN(w_writeN),
@@ -166,7 +190,9 @@ UnidadeControle UC (
 	.T7(T7),
 	.T8(T8),
 	.T9(T9),
-	.read(read));
+	.read(read),
+	.trSTD(w_trSTD),
+	.trLDD(w_trLDD));
 
 // Acumulador
 Registrador AC (.clk(clk_100Hz), .write(w_writeAC), .data(w_ULA), .q(w_AC));

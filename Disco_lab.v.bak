@@ -1,0 +1,29 @@
+// Memoria secundaria (disco simulado)
+module Disco_lab
+#(parameter DATA_WIDTH=16, parameter ADDR_WIDTH=15)
+(
+	input [(DATA_WIDTH-1):0] data,
+	input [(ADDR_WIDTH-1):0] addr,
+	input tr, clk,
+	output [(DATA_WIDTH-1):0] q
+);
+
+	// Declare the RAM variable
+	reg [DATA_WIDTH-1:0] disc[2**ADDR_WIDTH-1:0];
+	
+	// Para usar o lab virtual precisa inserir os valores
+	// iniciais diretamente no codigo verilog
+	initial begin
+		disc[0] = 0101100000000000; // IN 1000
+	end 
+	
+	always @ (posedge clk) begin
+		if (tr) begin
+			disc[addr] <= data;
+		end
+	end
+	
+	assign q = disc[addr];
+	
+endmodule
+

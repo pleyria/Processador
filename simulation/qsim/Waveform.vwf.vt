@@ -19,38 +19,78 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/30/2021 11:54:51"
+// Generated on "01/24/2022 13:26:51"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          divisorFreq_1kHz
+// Verilog Test Bench (with test vectors) for design :                          MemoryControl
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module divisorFreq_1kHz_vlg_vec_tst();
+module MemoryControl_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg f_in;
+reg clk;
+reg ldd;
+reg pos;
+reg [15:0] q_p;
+reg [15:0] q_s;
+reg std;
 // wires                                               
-wire f_out;
+wire [15:0] addr_p;
+wire [14:0] addr_s;
+wire [15:0] data_p;
+wire [15:0] data_s;
+wire tr_p;
+wire tr_s;
+wire waitTR;
 
 // assign statements (if any)                          
-divisorFreq_1kHz i1 (
+MemoryControl i1 (
 // port map - connection between master ports and signals/registers   
-	.f_in(f_in),
-	.f_out(f_out)
+	.addr_p(addr_p),
+	.addr_s(addr_s),
+	.clk(clk),
+	.data_p(data_p),
+	.data_s(data_s),
+	.ldd(ldd),
+	.pos(pos),
+	.q_p(q_p),
+	.q_s(q_s),
+	.std(std),
+	.tr_p(tr_p),
+	.tr_s(tr_s),
+	.waitTR(waitTR)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
 
-// f_in
+// clk
 always
 begin
-	f_in = 1'b0;
-	f_in = #20000 1'b1;
-	#20000;
+	clk = 1'b0;
+	clk = #10000 1'b1;
+	#10000;
+end 
+
+// std
+initial
+begin
+	std = 1'b0;
+end 
+
+// ldd
+initial
+begin
+	ldd = 1'b1;
+end 
+
+// pos
+initial
+begin
+	pos = 1'b0;
 end 
 endmodule
 

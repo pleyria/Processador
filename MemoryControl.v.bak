@@ -1,0 +1,63 @@
+module MemoryControl(
+	data_p,
+	addr_p,
+	tr_p,
+	q_p,
+	data_s,
+	addr_s,
+	tr_s,
+	q_s,
+	pos,
+	std,
+	ldd
+	clk2);
+
+input [15:0] q_p, q_s;	
+input pos, std, ldd, clk2;
+output tr_p, tr_s;
+output [15:0] data_p, data_s, addr_p;
+output [16:0] addr_s;
+
+parameter INATIVO = 1'b0;
+parameter ATIVO = 1'b1;
+parameter P1 = 17'b0;
+parameter P2 = 17'd39322;
+parameter STOREDISC = 1'b0;
+parameter LOADDISC = 1'b1;
+
+reg estado;
+reg sentido;
+reg [15:0] count_p;
+reg [16:0] count_s;
+
+initial begin
+	estado = INATIVO;
+end
+
+always @(posedge clk2) begin
+	if (estado == INATIVO) begin
+		if(std) begin
+			count_p = pos * P2;
+			estado = ATIVO;
+			sentido = STOREDISC;
+		end
+		if(tdd) begin
+			
+		end
+	end
+	else begin
+		if (sentido = STOREDISC) begin	// principal --> secundaria
+			if(count_p <= 2'd65535) begin // ciclo de transferencia antes do fim
+				
+			end
+			else begin // fim do ciclo de transferencia
+				estado = INATIVO;
+			end
+		end
+		if (sentido = LOADDISC) begin // principal <-- secundaria
+			
+		end
+	end
+end
+
+endmodule

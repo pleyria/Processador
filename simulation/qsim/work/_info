@@ -9,50 +9,146 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/pedro/projetos quartus/Processador/simulation/qsim
-vdivisorFreq_1kHz
-Z1 !s110 1638284092
+vCPU_teste
+Z1 !s110 1643048476
 !i10b 1
-!s100 <bQkCVBg<@zhiadZ9k_O52
+!s100 nbKZ>D^fo23BZ:S[8]M_J2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IBam]l_5@lL:FLhm05KUoa0
+Icl1g=ca]hV6kNcLi32iSD2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z4 w1638284091
+Z4 w1643048475
 Z5 8Processador.vo
 Z6 FProcessador.vo
-!i122 32
-L0 32 1248
+!i122 136
+L0 32 39904
 Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1638284092.000000
+Z8 !s108 1643048475.000000
 Z9 !s107 Processador.vo|
 Z10 !s90 -work|work|Processador.vo|
 !i113 1
 Z11 o-work work
 Z12 tCvgOpt 0
+n@c@p@u_teste
+vCPU_teste_vlg_vec_tst
+R1
+!i10b 1
+!s100 0]>3>Hj52PnF]9P0?z12O3
+R2
+ITh<O2ER8hFgBZ8K1UKb?21
+R3
+R0
+w1643048474
+8Waveform4.vwf.vt
+FWaveform4.vwf.vt
+!i122 137
+L0 30 66
+R7
+r1
+!s85 0
+31
+!s108 1643048476.000000
+!s107 Waveform4.vwf.vt|
+!s90 -work|work|Waveform4.vwf.vt|
+!i113 1
+R11
+R12
+n@c@p@u_teste_vlg_vec_tst
+vDecodificadorInstrucoes
+Z13 !s110 1641994684
+!i10b 1
+!s100 h4EUal_Y<i2o5dmAj?1k<0
+R2
+I5h=H;N_QlEEQRKV1X;e[M3
+R3
+R0
+w1641994684
+R5
+R6
+!i122 96
+L0 32 1230
+R7
+r1
+!s85 0
+31
+Z14 !s108 1641994684.000000
+R9
+R10
+!i113 1
+R11
+R12
+n@decodificador@instrucoes
+vDecodificadorInstrucoes_vlg_vec_tst
+R13
+!i10b 1
+!s100 ^5K5S4<z=I;m1O@m>A2P[0
+R2
+I>6X<G53A3NF:4?dO;ClkN3
+R3
+R0
+w1641994683
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+!i122 97
+L0 30 140
+R7
+r1
+!s85 0
+31
+R14
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R11
+R12
+n@decodificador@instrucoes_vlg_vec_tst
+vdivisorFreq_1kHz
+Z15 !s110 1638284092
+!i10b 1
+!s100 <bQkCVBg<@zhiadZ9k_O52
+R2
+IBam]l_5@lL:FLhm05KUoa0
+R3
+R0
+Z16 w1638284091
+R5
+R6
+!i122 32
+L0 32 1248
+R7
+r1
+!s85 0
+31
+Z17 !s108 1638284092.000000
+R9
+R10
+!i113 1
+R11
+R12
 ndivisor@freq_1k@hz
 vdivisorFreq_1kHz_vlg_vec_tst
-R1
+R15
 !i10b 1
 !s100 Aa=K`L=47<B:HKAY:J=LP0
 R2
 I9kDKl=n:XH]j?_2@]gGlH0
 R3
 R0
-R4
-Z13 8Waveform.vwf.vt
-Z14 FWaveform.vwf.vt
+R16
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
 !i122 33
 L0 30 26
 R7
 r1
 !s85 0
 31
-R8
-Z15 !s107 Waveform.vwf.vt|
-Z16 !s90 -work|work|Waveform.vwf.vt|
+R17
+Z20 !s107 Waveform.vwf.vt|
+Z21 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
 R11
 R12
@@ -60,16 +156,16 @@ ndivisor@freq_1k@hz_vlg_vec_tst
 vhard_block
 R1
 !i10b 1
-!s100 @VzR_=Oo1X6`belc<>zR53
+!s100 3g4IRjoK_57YVWBYgzDV92
 R2
-I7NEX3h>JGacL_1I=:Df2S3
+IdFgXN55ToLJm16dj9k^b60
 R3
 R0
 R4
 R5
 R6
-!i122 32
-L0 1281 34
+!i122 136
+L0 39937 34
 R7
 r1
 !s85 0
@@ -80,24 +176,120 @@ R10
 !i113 1
 R11
 R12
-vUnidadeControle
-Z17 !s110 1638282135
+vMemoryControl
+Z22 !s110 1643041756
 !i10b 1
-!s100 hO>@6d=J=TLj4khokRN8f0
+!s100 TATAZW0cB7nQN3]CkWY]A3
 R2
-IRR?N^AC`6SL4KmUGDPHLW1
+IiWhII;?e4zil=KK9ETmY31
 R3
 R0
-Z18 w1638282134
+w1643041756
 R5
 R6
-!i122 14
-L0 32 2471
+!i122 114
+L0 32 4461
 R7
 r1
 !s85 0
 31
-Z19 !s108 1638282135.000000
+Z23 !s108 1643041756.000000
+R9
+R10
+!i113 1
+R11
+R12
+n@memory@control
+vMemoryControl_vlg_vec_tst
+R22
+!i10b 1
+!s100 z9:iGmBSP_eeXUWfnUmFC2
+R2
+I[KFG?mzcnRd1J2NI6J:_O1
+R3
+R0
+w1643041755
+8Waveform3.vwf.vt
+FWaveform3.vwf.vt
+!i122 115
+L0 30 226
+R7
+r1
+!s85 0
+31
+R23
+!s107 Waveform3.vwf.vt|
+!s90 -work|work|Waveform3.vwf.vt|
+!i113 1
+R11
+R12
+n@memory@control_vlg_vec_tst
+vtesteSTD
+Z24 !s110 1641831750
+!i10b 1
+!s100 0DD`^fP5T_O^Fo2P[bbN[1
+R2
+IdnKNY@R:ka0o19BCoEJ]M2
+R3
+R0
+w1641831750
+R5
+R6
+!i122 90
+L0 32 32044
+R7
+r1
+!s85 0
+31
+Z25 !s108 1641831750.000000
+R9
+R10
+!i113 1
+R11
+R12
+nteste@s@t@d
+vtesteSTD_vlg_vec_tst
+R24
+!i10b 1
+!s100 zTS4U=VM1KNVVTW3BRfO?1
+R2
+IohMQJJ65ELK:c2n7eV]L?0
+R3
+R0
+w1641831749
+R18
+R19
+!i122 91
+L0 30 169
+R7
+r1
+!s85 0
+31
+R25
+R20
+R21
+!i113 1
+R11
+R12
+nteste@s@t@d_vlg_vec_tst
+vUnidadeControle
+Z26 !s110 1643033663
+!i10b 1
+!s100 5Xi;CmFJ1^MWiHSU9LkD=1
+R2
+I>QUV;0_9H^Kl2njnzQLOi1
+R3
+R0
+Z27 w1643033662
+R5
+R6
+!i122 108
+L0 32 2551
+R7
+r1
+!s85 0
+31
+Z28 !s108 1643033663.000000
 R9
 R10
 !i113 1
@@ -105,25 +297,25 @@ R11
 R12
 n@unidade@controle
 vUnidadeControle_vlg_vec_tst
-R17
+R26
 !i10b 1
-!s100 `66FV?7XJYKWHSPN7:3hQ3
+!s100 c[FWHjT4PJ@6RXk^<iHzj0
 R2
-IacV<<QbkIbIfB<gSi[PQS2
+I;R^VXC2>1l5RRQ?o`hP_g1
 R3
 R0
-R18
-R13
-R14
-!i122 15
-L0 30 258
+R27
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 109
+L0 30 286
 R7
 r1
 !s85 0
 31
-R19
-R15
-R16
+R28
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
 !i113 1
 R11
 R12

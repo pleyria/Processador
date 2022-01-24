@@ -1,0 +1,19 @@
+module testeSTD(clk, q);
+
+input clk;
+output q;
+
+wire [15:0] data_p, addr_p, q_p, data_s, q_s;
+wire [17:0] addr_s;
+wire tr_p;
+
+Memoria MEM(.data(data_p), .addr(16'd0), .addr_t(addr_p), .we(0), .clk(0), .clk2(clk2), .tr(tr_p), .q(q_p));
+
+Disco DISC(.data(data_s), .addr(addr_s), .clk2(clk2), .tr(tr_s), .q(q_s));
+
+MemoryControl CONT(.data_p(data_p), .addr_p(addr_p), .tr_p(tr_p), .q_p(q_p), .data_s(data_s), .addr_s(addr_s),
+.tr_s(tr_s), .q_s(q_s), .pos(0), .std(1), .ldd(0), .clk2(clk2));
+
+assign q = q_s;
+
+endmodule

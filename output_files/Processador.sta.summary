@@ -2,112 +2,40 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'divisorFreq_100Hz:div100Hz|saida'
-Slack : -7.436
-TNS   : -3626.716
-
-Type  : Slow 1200mV 85C Model Setup 'divisorFreq_1kHz:div1kHz|saida'
-Slack : -4.551
-TNS   : -143.754
-
 Type  : Slow 1200mV 85C Model Setup 'clk_kit'
-Slack : -2.925
-TNS   : -136.071
-
-Type  : Slow 1200mV 85C Model Hold 'divisorFreq_100Hz:div100Hz|saida'
-Slack : 0.369
-TNS   : 0.000
+Slack : -8.214
+TNS   : -8356.128
 
 Type  : Slow 1200mV 85C Model Hold 'clk_kit'
-Slack : 0.403
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'divisorFreq_1kHz:div1kHz|saida'
-Slack : 0.403
+Slack : 0.383
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_kit'
 Slack : -3.000
-TNS   : -77.530
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisorFreq_100Hz:div100Hz|saida'
-Slack : -2.693
-TNS   : -1579.276
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divisorFreq_1kHz:div1kHz|saida'
-Slack : -1.285
-TNS   : -65.535
-
-Type  : Slow 1200mV 0C Model Setup 'divisorFreq_100Hz:div100Hz|saida'
-Slack : -6.721
-TNS   : -3287.232
-
-Type  : Slow 1200mV 0C Model Setup 'divisorFreq_1kHz:div1kHz|saida'
-Slack : -4.074
-TNS   : -126.417
+TNS   : -3519.268
 
 Type  : Slow 1200mV 0C Model Setup 'clk_kit'
-Slack : -2.577
-TNS   : -118.705
-
-Type  : Slow 1200mV 0C Model Hold 'divisorFreq_100Hz:div100Hz|saida'
-Slack : 0.353
-TNS   : 0.000
+Slack : -7.464
+TNS   : -7553.746
 
 Type  : Slow 1200mV 0C Model Hold 'clk_kit'
-Slack : 0.355
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'divisorFreq_1kHz:div1kHz|saida'
-Slack : 0.355
+Slack : 0.353
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_kit'
 Slack : -3.000
-TNS   : -77.530
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisorFreq_100Hz:div100Hz|saida'
-Slack : -2.649
-TNS   : -1556.748
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divisorFreq_1kHz:div1kHz|saida'
-Slack : -1.285
-TNS   : -65.535
-
-Type  : Fast 1200mV 0C Model Setup 'divisorFreq_100Hz:div100Hz|saida'
-Slack : -3.301
-TNS   : -1521.316
-
-Type  : Fast 1200mV 0C Model Setup 'divisorFreq_1kHz:div1kHz|saida'
-Slack : -1.754
-TNS   : -45.435
+TNS   : -3465.764
 
 Type  : Fast 1200mV 0C Model Setup 'clk_kit'
-Slack : -0.877
-TNS   : -36.771
-
-Type  : Fast 1200mV 0C Model Hold 'divisorFreq_100Hz:div100Hz|saida'
-Slack : 0.157
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'divisorFreq_1kHz:div1kHz|saida'
-Slack : 0.180
-TNS   : 0.000
+Slack : -3.634
+TNS   : -3609.417
 
 Type  : Fast 1200mV 0C Model Hold 'clk_kit'
-Slack : 0.181
+Slack : 0.162
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_kit'
 Slack : -3.000
-TNS   : -64.810
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisorFreq_100Hz:div100Hz|saida'
-Slack : -1.000
-TNS   : -668.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divisorFreq_1kHz:div1kHz|saida'
-Slack : -1.000
-TNS   : -51.000
+TNS   : -1564.209
 
 ------------------------------------------------------------

@@ -1,4 +1,4 @@
-// divisor de frequencia 50Mhz -> 1kHz
+// divisor de frequencia 50Mhz -> 100Hz
 module divisorFreq_100Hz(f_in, f_out);
 
 // frequencia de entrada
